@@ -9,21 +9,40 @@
 ### 2024-01
 
 ## Integrantes
-- [Nome](https://github.com/nome/)
+- [Fernando Haseloff](https://github.com/caicara29/)
+- [Gabriel Frutuoso](https://github.com/bzexists/)
+- [Henrique Lecce](https://github.com/HSLPines/)
+- [Isabelle Dib](https://github.com/isa-dib/)
 
 ## Descrição do Projeto
 
+O descarte indevido de lixo é um problema real na sociedade, como consequência
+disso a poluição de inúmeras áreas verdes e urbanas, levando a piora de qualidade
+de vida humana, além da extinção de espécies, animais e biomas.
+Como proposta, o grupo decidiu desenvolver um website que pretende aliviar o
+problema citado anteriormente, e que ofereça instruções de como descartar
+resíduos corretamente, locais apropriados para a coleta, e dicas sobre o que fazer
+com seus resíduos orgânicos .
+
 ### Problema
 
-Problema
+Tendo os objetivos de desenvolvimento sustentável como base para delimitação do
+problema, as metas 11 e 12 abordam questões relacionadas ao desenvolvimento
+urbano sustentável e ao consumo e produção sustentáveis.
+O problema escolhido foi a gestão de resíduos urbanos, a gestão eficaz de resíduos
+em áreas urbanas está diretamente ligada aos objetivos de consumo, produção e
+desenvolvimento sustentável.
 
 ### Objetivo Final
 
-Objetivo Final
+Utilizando-se da metodologia ágil, e processo iterativo, o grupo espera entregar até
+o final do semestre um MVP (Minimum Viable Product) do site, que cumpra os
+requisitos funcionais que serão estabelecidos, e que também realize a proposta
+inicial de informar sobre locais de coleta de lixo.
+O objetivo ideal de entrega é um site completamente funcional, com um bom fluxo
+de navegação, acessível, e que realize todos os requisitos estabelecidos (funcionais
+e não-funcionais).
 
-### Principais Recursos
-
-Principais Recursos
 
 # Detalhes de Configuração
 
