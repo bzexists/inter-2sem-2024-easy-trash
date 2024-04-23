@@ -1,3 +1,32 @@
+h1{
+    font-family: "Comfortaa", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 800;
+    font-style: normal;
+    font-size: 55px !important;
+    text-align: left;
+}
+h2{
+    font-family: "Comfortaa", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 800;
+    font-style: normal;
+    font-size: 40px !important;
+}
+h3{
+    font-family: "Comfortaa", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 800 !important;
+    font-style: normal;
+    font-size: 25px !important;
+}
+body{
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 20px;
+}
 img {
 	max-width: 100%;
 }
@@ -8,9 +37,11 @@ html, body {
 }
 
 .limitador {
-	max-width: 1200px;
-	margin: 0px auto;
+	max-width: 1240px;
+	margin: 0px auto;	
+}
 
+.rodape-inferior-manter {
 	/* Para fazer o rodapé ficar sempre na parte inferior da página ;) */
 	min-height: 100vh;
 	display: flex;
@@ -19,6 +50,7 @@ html, body {
 }
 
 .conteudo {
+	margin-top: 20px;
 	/* Para fazer o rodapé ficar sempre na parte inferior da página ;) */
 	flex: 1 1 auto;
 }
@@ -32,4 +64,26 @@ html, body {
 .link-rodape, .link-rodape:hover {
 	color: white;
 	text-decoration: none;
+}
+
+.centralizar{
+	text-align: center;
+	align-items: center;
+	align-content: center;
+}
+.align-left{
+	text-align: left;
+	margin: 0 !important
+}
+
+.bg-barra{
+	background-color: #C1C7CD;
+}
+
+.linha-meio{
+    margin: 20px auto;
+    border-width: 5px;  
+    border-radius: 30px;
+	max-width: 100px;
+    border-color: #C1C7CD;
 }

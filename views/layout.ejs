@@ -7,21 +7,20 @@
 </head>
 <body>
 
-	<div class="limitador">
+	<%- include("comum/barra") %>
 
-		<%- include("comum/barra") %>
+	<div class="limitador rodape-inferior-manter">
 
 		<div class="conteudo">
 
 			<%- body %>
 
 		</div>
-
-		<%- include("comum/rodape") %>
-
-		<%- defineContent("espaco-rodape") %>
-
 	</div>
+
+	<%- include("comum/rodape") %>
+
+	<%- defineContent("espaco-rodape") %>
 
 </body>
 </html>
