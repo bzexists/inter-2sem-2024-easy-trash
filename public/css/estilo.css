@@ -33,3 +33,44 @@ html, body {
 	color: white;
 	text-decoration: none;
 }
+<<<<<<< Updated upstream
+=======
+
+.centralizar{
+	text-align: center;
+	align-items: center;
+	align-content: center;
+}
+.align-left{
+	text-align: left;
+	margin: 0px !important
+}
+
+.bg-barra{
+	background-color: #C1C7CD;
+}
+
+.linha-meio{
+    margin: 20px auto;
+    border-width: 5px;  
+    border-radius: 30px;
+	max-width: 200px;
+    border-color: #C1C7CD;
+}
+
+.img-staff{
+    border-radius: 50%;
+    max-width: 200px;
+    width: 100%;
+}
+
+.fundo-coluna {
+    padding: 15px;
+}
+
+.centralizar-coluna{
+    display: flex;
+    align-content: center;
+    flex-wrap: wrap;
+}
+>>>>>>> Stashed changes
