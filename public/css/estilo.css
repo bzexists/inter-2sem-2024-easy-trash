@@ -111,13 +111,13 @@ html, body {
 }
 
 .img-carrossel{
-    max-height: 70vh;
+    max-height: 80vh;
     object-fit: cover;
     object-position: top;
 }
 
 .fundo-legenda-carrossel{
-    background-color: #C1C7CD;
+    background-color: rgba#C1C7CD;
     margin: 0px -15%;
     bottom: 0px;
     color: black !important;

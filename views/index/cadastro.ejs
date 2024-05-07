@@ -1,0 +1,162 @@
+<div class="pb-5">
+	<div class="py-3">
+		<h1>Cadastre aqui um local de coleta</h1>
+	</div>
+</div>
+
+<div class="container-fluid">
+	<h3>Dados do Local</h3>
+	<div class="row">
+		<div class="col">
+			<div class="pb-3">
+				<label for="inputNomeLocal">Nome do Local*</label><br>
+				<input type="text" id="inputNomeLocal" placeholder="Nome do Local*" />
+			</div>
+			<div class="pb-3">
+				<label for="inputEmail">CEP*</label><br>
+				<input type="email" id="inputCEP" placeholder="ex.: 04015-013"/>
+			</div>
+			<div class="pb-3">
+				<label for="inputNumero">Número*</label><br>
+				<input type="email" id="inputNumero" placeholder="ex.: 1240"/>
+			</div>
+		</div>
+		<div class="col">
+			<div class="pb-3">
+				<label for="inputLogradouro">Logradouro*</label><br>
+				<input type="text" id="inputLogradouro"/>
+			</div>
+			<div class="pb-3">
+				<label for="inputBairro">Bairro*</label><br>
+				<input type="text" id="inputBairro" />
+			</div>
+			<div class="pb-3">
+				<label for="inputCidade">Cidade*</label><br>
+				<input type="text" id="inputCidade" />
+			</div>
+			<div class="pb-3">
+				<label for="inputEstado">Estado*</label><br>
+				<input type="text" id="inputEstado" />
+			</div>
+		</div>
+		<div class="col">
+			<h3>Foto do local</h3>
+			<div class="pb-3">
+				<label for="inputFoto">Anexar uma Foto</label><br>
+				<input type="file" id="inputFoto" />
+			</div>
+			<div class="pb-3">
+				<button type="button" onclick="uploadFoto()">
+					Enviar Foto
+				</button>
+			</div>
+			<div class="pb-3">
+				<button type="button" onclick="criarLocal()">
+					Enviar
+				</button>
+			</div>
+		</div>
+	</div>
+</div>
+<script type="text/javascript">
+
+	async function criarLocal() {
+
+		let inputNomeLocal = document.getElementById("inputNomeLocal");
+		let inputCEP = document.getElementById("inputCEP");
+		let inputNumero = document.getElementById("inputNumero");
+		let inputLogradouro = document.getElementById("inputLogradouro");
+		let inputBairro = document.getElementById("inputBairro");
+		let inputCidade = document.getElementById("inputEcidainputCidade");
+		let inputEstado = document.getElementById("inputEmasinputEstado");
+
+		let NomeLocal = inputNomeLocal.value;
+		let CEP = inputCEP.value;
+		let Numero = inputNumero.value;
+		let Logradouro = inputLogradouro.value;
+		let Bairro = inputBairro.value;
+		let Cidade = inputCidade.value;
+		let Estado = inputEstado.value;
+
+		if (!NomeLocal) {
+			alert("Nome inválido!");
+			return;
+		}
+
+		if (!CEP) {
+			alert("CEP inválido!");
+			return;
+		}
+
+		if (!Numero) {
+			alert("Numero inválido!");
+			return;
+		}
+
+		if (!Logradouro) {
+			alert("Logradouro inválido!");
+			return;
+		}
+
+		if (!Bairro) {
+			alert("Bairro inválido!");
+			return;
+		}
+
+		if (!Cidade) {
+			alert("Cidade inválido!");
+			return;
+		}
+
+		if (!Estado) {
+			alert("Estado inválido!");
+			return;
+		}
+
+		let Local = {
+			NomeLocal: NomeLocal,
+			CEP : CEP,
+			Numero : Numero,
+			Logradouro : Logradouro,
+			Bairro : Bairro,
+			Cidade : Cidade,
+			Estado : Estado
+		};
+
+		try {
+
+			let response = await fetch("https://academico.espm.br/testeapi/criar", {
+				method: "POST",
+				body: JSON.stringify(pessoa),
+				headers: {
+					"content-type": "application/json"
+				}
+			});
+
+			if (!response.ok) {
+				alert("Ocorreu um erro ao criar a pessoa :(");
+				return;
+			}
+
+			inputNome.value = "";
+			inputEmail.value = "";
+
+			alert("Pessoa criada com sucesso!");
+
+		} catch (ex) {
+			alert("Ocorreu um erro de rede ao criar a pessoa: " + ex.message)
+		}
+
+	}
+
+	async function uploadFoto(){
+		let inputFoto = document.getElementById('inputFoto');
+    	inputFoto.addEventListener('change', handleFileSelect);
+
+	async function handleFileSelect(event) {
+		let file = event.target.files[0];
+		console.log(file);
+	  }
+	}
+
+</script>
