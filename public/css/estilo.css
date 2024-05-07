@@ -25,7 +25,7 @@ body{
     font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
-    font-size: 20px;
+    font-size: 16px;
 }
 img {
 	max-width: 100%;
@@ -37,7 +37,7 @@ html, body {
 }
 
 .limitador {
-	max-width: 1240px;
+	max-width: 1366px;
 	margin: 0px auto;	
 }
 
@@ -50,9 +50,15 @@ html, body {
 }
 
 .conteudo {
-	margin-top: 20px;
 	/* Para fazer o rodapé ficar sempre na parte inferior da página ;) */
 	flex: 1 1 auto;
+}
+.mt-20{
+    margin-top: 20px;
+}
+
+.font-20{
+    font-size: 20px !important;
 }
 
 .rodape {
@@ -102,4 +108,54 @@ html, body {
     display: flex;
     align-content: center;
     flex-wrap: wrap;
+}
+
+.img-carrossel{
+    max-height: 70vh;
+    object-fit: cover;
+    object-position: top;
+}
+
+.fundo-legenda-carrossel{
+    background-color: #C1C7CD;
+    margin: 0px -15%;
+    bottom: 0px;
+    color: black !important;
+}
+
+.fundo-cinza-news{
+    background-color: #cfcfcf;
+    border-radius: 15px;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.custom-search {
+    position: relative;
+    max-width: 300px;
+    margin: 0 auto;
+}
+  .custom-search-input {
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 100px;
+    padding: 10px 100px 10px 20px;
+    line-height: 1;
+    box-sizing: border-box;
+    outline: none;
+}
+  .custom-search-botton {
+    position: absolute;
+    right: 3px;
+    top: 3px;
+    bottom: 3px;
+    border: 0;
+    background: #3326FF;
+    color: #fff;
+    outline: none;
+    margin: 0;
+    padding: 0 10px;
+    border-radius: 100px;
+    z-index: 2;
 }
