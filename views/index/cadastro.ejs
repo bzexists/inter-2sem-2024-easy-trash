@@ -65,6 +65,7 @@
 		let inputNomeLocal = document.getElementById("inputNomeLocal");
 		let inputCEP = document.getElementById("inputCEP");
 		let inputNumero = document.getElementById("inputNumero");
+		let inputTelefone = document.getElementById("inputTelefone");
 		let inputLogradouro = document.getElementById("inputLogradouro");
 		let inputBairro = document.getElementById("inputBairro");
 		let inputCidade = document.getElementById("inputEcidainputCidade");
@@ -73,6 +74,7 @@
 		let NomeLocal = inputNomeLocal.value;
 		let CEP = inputCEP.value;
 		let Numero = inputNumero.value;
+		let Telefone = inputTelefone.value;
 		let Logradouro = inputLogradouro.value;
 		let Bairro = inputBairro.value;
 		let Cidade = inputCidade.value;
@@ -90,6 +92,11 @@
 
 		if (!Numero) {
 			alert("Numero inválido!");
+			return;
+		}
+
+		if (!Telefone) {
+			alert("Telefone inválido!");
 			return;
 		}
 
@@ -117,6 +124,7 @@
 			NomeLocal: NomeLocal,
 			CEP : CEP,
 			Numero : Numero,
+			Telefone : Telefone,
 			Logradouro : Logradouro,
 			Bairro : Bairro,
 			Cidade : Cidade,
@@ -124,31 +132,38 @@
 		};
 
 		try {
-
 			let response = await fetch("https://academico.espm.br/testeapi/criar", {
 				method: "POST",
-				body: JSON.stringify(pessoa),
+				body: JSON.stringify(Local),
 				headers: {
 					"content-type": "application/json"
 				}
 			});
 
 			if (!response.ok) {
-				alert("Ocorreu um erro ao criar a pessoa :(");
+				alert("Ocorreu um erro ao cadastrar o local :(");
 				return;
 			}
 
-			inputNome.value = "";
-			inputEmail.value = "";
+			inputNomeLocal.value = "";
+			inputCEP.value = "";
+			letinputNumero.value = "";
+			letinputTelefone.value = "";
+			inputLogradouro.value = "";
+			inputBairro.value = "";
+			inputCidade.value = "";
+			inputEstado.value = "";
 
-			alert("Pessoa criada com sucesso!");
+			// sweetalert aqui 
+			alert("Local criado com sucesso!");
 
 		} catch (ex) {
-			alert("Ocorreu um erro de rede ao criar a pessoa: " + ex.message)
+			alert("Ocorreu um erro de rede ao cadastrar o local: " + ex.message)
 		}
 
 	}
 
+	// não sei se isso ta certo 
 	async function uploadFoto(){
 		let inputFoto = document.getElementById('inputFoto');
     	inputFoto.addEventListener('change', handleFileSelect);
