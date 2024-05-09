@@ -4,66 +4,80 @@
 	</div>
 </div>
 
-<div class="container-fluid">
+<form class="container-fluid" id="form">
 	<h3>Dados do Local</h3>
 	<div class="row">
-		<div class="col">
-			<div class="pb-3">
+		<div class="col-md-4">
+			<div class="form-group">
 				<label for="inputNomeLocal">Nome do Local*</label><br>
-				<input type="text" id="inputNomeLocal" placeholder="Nome do Local*" />
+				<input class="form-control" type="text" id="inputNomeLocal" name="nome_local" placeholder="Nome do Local*" />
 			</div>
-			<div class="pb-3">
-				<label for="inputEmail">CEP*</label><br>
-				<input type="email" id="inputCEP" placeholder="ex.: 04015-013"/>
+			<div class="form-group">
+				<label for="inputCEP">CEP*</label><br>
+				<input class="form-control" type="email" id="inputCEP" name="cep" placeholder="ex.: 04015-013"/>
 			</div>
-			<div class="pb-3">
+			<div class="form-group">
 				<label for="inputNumero">Número*</label><br>
-				<input type="email" id="inputNumero" placeholder="ex.: 1240"/>
+				<input class="form-control" type="email" id="inputNumero" name="numero" placeholder="ex.: 1240"/>
 			</div>
-			<div class="pb-3">
+			<div class="form-group">
 				<label for="inputTelefone">Telefone</label><br>
-				<input type="email" id="inputTelefone" placeholder="ex.: (99) 99999-9999"/>
+				<input class="form-control" type="email" id="inputTelefone" placeholder="ex.: (99) 99999-9999"/>
 			</div>
 		</div>
-		<div class="col">
-			<div class="pb-3">
+		<div class="col-md-4">
+			<div class="form-group">
 				<label for="inputLogradouro">Logradouro*</label><br>
-				<input type="text" id="inputLogradouro"/>
+				<input class="form-control" type="text" id="inputLogradouro"/>
 			</div>
-			<div class="pb-3">
+			<div class="form-group">
 				<label for="inputBairro">Bairro*</label><br>
-				<input type="text" id="inputBairro" />
+				<input class="form-control" type="text" id="inputBairro" />
 			</div>
-			<div class="pb-3">
+			<div class="form-group">
 				<label for="inputCidade">Cidade*</label><br>
-				<input type="text" id="inputCidade" />
+				<input class="form-control" type="text" id="inputCidade" />
 			</div>
-			<div class="pb-3">
+			<div class="form-group">
 				<label for="inputEstado">Estado*</label><br>
-				<input type="text" id="inputEstado" />
+				<input class="form-control" type="text" id="inputEstado" />
 			</div>
 		</div>
-		<div class="col">
+		<div class="col-md-4">
 			<h3>Foto do local</h3>
-			<div class="pb-3">
+			<div class="form-group">
 				<label for="inputFoto">Anexar uma Foto</label><br>
-				<input type="file" id="inputFoto" />
+				<input class="form-control" type="file" id="inputFoto" />
 			</div>
-			<div class="pb-3">
-				<button type="button" onclick="uploadFoto()">
-					Enviar Foto
-				</button>
-			</div>
-			<div class="pb-3">
-				<button type="button" onclick="criarLocal()">
-					Enviar
+			<div class="form-group">
+				<button type="submit" class="btn btn-primary btn-block btn-lg">
+					Criar Local
 				</button>
 			</div>
 		</div>
 	</div>
-</div>
+</form>
+
+<script src="/public/js/jquery-validate/jquery.validate.min.js"></script>
+<script src="/public/js/jquery-validate/additional-methods.min.js"></script>
+<script src="/public/js/jquery-validate/localization/methods_pt.min.js"></script>
+<script src="/public/js/jquery-validate/localization/messages_pt_BR.min.js"></script>
+
 <script type="text/javascript">
 
+	$("#form").validate({
+		rules: {
+			nome_local: {
+				required: true
+			},
+			cep: {
+				required: true
+			},
+		},
+		submitHandler: function (form) {
+			
+		}
+	});
 	async function criarLocal() {
 
 		let inputNomeLocal = document.getElementById("inputNomeLocal");
