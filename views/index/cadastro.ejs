@@ -9,45 +9,45 @@
 	<div class="row">
 		<div class="col-md-4">
 			<div class="form-group">
-				<label for="inputNomeLocal">Nome do Local*</label><br>
-				<input class="form-control" type="text" id="inputNomeLocal" name="nome_local" placeholder="Nome do Local*" />
+				<label for="inputnomelocal">Nome do Local*</label><br>
+				<input class="form-control" type="text" id="inputnomelocal" name="nomelocal" placeholder="Nome do Local*" />
 			</div>
 			<div class="form-group">
-				<label for="inputCEP">CEP*</label><br>
-				<input class="form-control" type="email" id="inputCEP" name="cep" placeholder="ex.: 04015-013"/>
+				<label for="inputcep">CEP*</label><br>
+				<input class="form-control" type="text" id="inputcep" name="cep" placeholder="ex.: 04015-013"/>
 			</div>
 			<div class="form-group">
-				<label for="inputNumero">Número*</label><br>
-				<input class="form-control" type="email" id="inputNumero" name="numero" placeholder="ex.: 1240"/>
+				<label for="inputnumero">Número*</label><br>
+				<input class="form-control" type="text" id="inputnumero" name="numero" placeholder="ex.: 1240"/>
 			</div>
 			<div class="form-group">
-				<label for="inputTelefone">Telefone</label><br>
-				<input class="form-control" type="email" id="inputTelefone" placeholder="ex.: (99) 99999-9999"/>
+				<label for="inputtelefone">Telefone</label><br>
+				<input class="form-control" type="text" id="inputtelefone" name="telefone" placeholder="ex.: (99) 99999-9999"/>
 			</div>
 		</div>
 		<div class="col-md-4">
 			<div class="form-group">
-				<label for="inputLogradouro">Logradouro*</label><br>
-				<input class="form-control" type="text" id="inputLogradouro"/>
+				<label for="inputlogradouro">Logradouro*</label><br>
+				<input class="form-control" type="text" id="inputlogradouro" name="logradouro"/>
 			</div>
 			<div class="form-group">
-				<label for="inputBairro">Bairro*</label><br>
-				<input class="form-control" type="text" id="inputBairro" />
+				<label for="inputbairro">Bairro*</label><br>
+				<input class="form-control" type="text" id="inputbairro" name="bairro"/>
 			</div>
 			<div class="form-group">
-				<label for="inputCidade">Cidade*</label><br>
-				<input class="form-control" type="text" id="inputCidade" />
+				<label for="inputcidade">Cidade*</label><br>
+				<input class="form-control" type="text" id="inputcidade" name="cidade"/>
 			</div>
 			<div class="form-group">
-				<label for="inputEstado">Estado*</label><br>
-				<input class="form-control" type="text" id="inputEstado" />
+				<label for="inputestado">Estado*</label><br>
+				<input class="form-control" type="text" id="inputestado" name="estado"/>
 			</div>
 		</div>
 		<div class="col-md-4">
 			<h3>Foto do local</h3>
 			<div class="form-group">
-				<label for="inputFoto">Anexar uma Foto</label><br>
-				<input class="form-control" type="file" id="inputFoto" />
+				<label for="foto">Anexar uma Foto</label><br>
+				<input class="form-control" type="file" id="foto" name="foto"/>
 			</div>
 			<div class="form-group">
 				<button type="submit" class="btn btn-primary btn-block btn-lg">
@@ -67,129 +67,132 @@
 
 	$("#form").validate({
 		rules: {
-			nome_local: {
+			nomelocal: {
 				required: true
 			},
 			cep: {
 				required: true
 			},
+			numero: {
+				required: true
+			},
+			telefone: {
+				required: true
+			},
+			logradouro: {
+				required: true
+			},
+			bairro: {
+				required: true
+			},
+			cidade: {
+				required: true
+			},
+			estado: {
+				required: true
+			},
 		},
 		submitHandler: function (form) {
-			
+			criarLocal(form);
 		}
 	});
 	async function criarLocal() {
+		/*
+		let inputnomelocal = document.getElementById("inputnomelocal");
+		let inputcep = document.getElementById("inputcep");
+		let inputnumero = document.getElementById("inputnumero");
+		let inputtelefone = document.getElementById("inputtelefone");
+		let inputlogradouro = document.getElementById("inputlogradouro");
+		let inputbairro = document.getElementById("inputbairro");
+		let inputcidade = document.getElementById("inputcidade");
+		let inputestado = document.getElementById("inputestado");
 
-		let inputNomeLocal = document.getElementById("inputNomeLocal");
-		let inputCEP = document.getElementById("inputCEP");
-		let inputNumero = document.getElementById("inputNumero");
-		let inputTelefone = document.getElementById("inputTelefone");
-		let inputLogradouro = document.getElementById("inputLogradouro");
-		let inputBairro = document.getElementById("inputBairro");
-		let inputCidade = document.getElementById("inputEcidainputCidade");
-		let inputEstado = document.getElementById("inputEmasinputEstado");
+		let nomelocal = inputnomelocal.value;
+		let cep = inputcep.value;
+		let numero = inputnumero.value;
+		let telefone = inputtelefone.value;
+		let logradouro = inputlogradouro.value;
+		let bairro = inputbairro.value;
+		let cidade = inputcidade.value;
+		let estado = inputestado.value;
 
-		let NomeLocal = inputNomeLocal.value;
-		let CEP = inputCEP.value;
-		let Numero = inputNumero.value;
-		let Telefone = inputTelefone.value;
-		let Logradouro = inputLogradouro.value;
-		let Bairro = inputBairro.value;
-		let Cidade = inputCidade.value;
-		let Estado = inputEstado.value;
-
-		if (!NomeLocal) {
+		if (!nomelocal) {
 			alert("Nome inválido!");
 			return;
 		}
 
-		if (!CEP) {
-			alert("CEP inválido!");
+		if (!cep) {
+			alert("cep inválido!");
 			return;
 		}
 
-		if (!Numero) {
-			alert("Numero inválido!");
+		if (!numero) {
+			alert("numero inválido!");
 			return;
 		}
 
-		if (!Telefone) {
-			alert("Telefone inválido!");
+		if (!telefone) {
+			alert("telefone inválido!");
 			return;
 		}
 
-		if (!Logradouro) {
-			alert("Logradouro inválido!");
+		if (!logradouro) {
+			alert("logradouro inválido!");
 			return;
 		}
 
-		if (!Bairro) {
-			alert("Bairro inválido!");
+		if (!bairro) {
+			alert("bairro inválido!");
 			return;
 		}
 
-		if (!Cidade) {
-			alert("Cidade inválido!");
+		if (!cidade) {
+			alert("cidade inválido!");
 			return;
 		}
 
-		if (!Estado) {
-			alert("Estado inválido!");
+		if (!estado) {
+			alert("estado inválido!");
 			return;
 		}
-
-		let Local = {
-			NomeLocal: NomeLocal,
-			CEP : CEP,
-			Numero : Numero,
-			Telefone : Telefone,
-			Logradouro : Logradouro,
-			Bairro : Bairro,
-			Cidade : Cidade,
-			Estado : Estado
-		};
+		*/
 
 		try {
-			let response = await fetch("https://academico.espm.br/testeapi/criar", {
+			let response = await fetch("/criarLocal", {
 				method: "POST",
-				body: JSON.stringify(Local),
-				headers: {
-					"content-type": "application/json"
-				}
+				body: new FormData(form)
 			});
 
 			if (!response.ok) {
-				alert("Ocorreu um erro ao cadastrar o local :(");
+				exibirErro(response);
 				return;
 			}
 
-			inputNomeLocal.value = "";
-			inputCEP.value = "";
-			letinputNumero.value = "";
-			letinputTelefone.value = "";
-			inputLogradouro.value = "";
-			inputBairro.value = "";
-			inputCidade.value = "";
-			inputEstado.value = "";
-
-			// sweetalert aqui 
-			alert("Local criado com sucesso!");
+			/*
+			inputnomelocal.value = "";
+			inputcep.value = "";
+			letinputnumero.value = "";
+			letinputtelefone.value = "";
+			inputlogradouro.value = "";
+			inputbairro.value = "";
+			inputcidade.value = "";
+			inputestado.value = "";
+			*/
+ 
+			Swal.fire({
+				title: "Ebaa!",
+				text: "Cadastro realizado com sucesso!",
+				icon: "success"
+			  });;
 
 		} catch (ex) {
-			alert("Ocorreu um erro de rede ao cadastrar o local: " + ex.message)
+			Swal.fire({
+				icon: "error",
+				title: "Oops...",
+				text: "Ocorreu um problema de rede ao cadastrar o local: " + ex.message
+			  });; 
 		}
 
-	}
-
-	// não sei se isso ta certo 
-	async function uploadFoto(){
-		let inputFoto = document.getElementById('inputFoto');
-    	inputFoto.addEventListener('change', handleFileSelect);
-
-	async function handleFileSelect(event) {
-		let file = event.target.files[0];
-		console.log(file);
-	  }
 	}
 
 </script>
