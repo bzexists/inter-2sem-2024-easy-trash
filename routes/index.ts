@@ -81,6 +81,18 @@ class IndexRoute {
 			res.json("Estado inválido");
 			return;
 		}
+		ecoponto.latitude = parseFloat((ecoponto.latitude || "").toString().replace(",", "."));
+		if (!ecoponto.latitude) {
+			res.status(400);
+			res.json("Latitude inválida");
+			return;
+		}
+		ecoponto.longitude = parseFloat((ecoponto.longitude || "").toString().replace(",", "."));
+		if (!ecoponto.longitude) {
+			res.status(400);
+			res.json("Longitude inválida");
+			return;
+		}
 
 		// Verifica se a foto foi enviada
 		if (!req.uploadedFiles || !req.uploadedFiles.foto) {
@@ -96,7 +108,7 @@ class IndexRoute {
 			// Todas os comandos SQL devem ser executados aqui dentro do app.sql.connect().
 
 			// As interrogações serão substituídas pelos valores passados ao final, na ordem passada.
-			await sql.query("INSERT INTO ecoponto (nomelocal, cep, numero, telefone, logradouro, bairro, cidade, estado) VALUES (?, ?, ?, ?, ?, ?, ?, ?)", [ecoponto.nomelocal, ecoponto.cep, ecoponto.numero, ecoponto.telefone, ecoponto.logradouro, ecoponto.bairro, ecoponto.cidade, ecoponto.estado]);
+			await sql.query("INSERT INTO ecoponto (nomelocal, cep, numero, telefone, logradouro, bairro, cidade, estado, lat, lng) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)", [ecoponto.nomelocal, ecoponto.cep, ecoponto.numero, ecoponto.telefone, ecoponto.logradouro, ecoponto.bairro, ecoponto.cidade, ecoponto.estado, ecoponto.latitude, ecoponto.longitude]);
 
 			const id = await sql.scalar("SELECT LAST_INSERT_ID()") as number;
 

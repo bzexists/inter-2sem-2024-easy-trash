@@ -5,48 +5,51 @@
 </div>
 
 <form class="container-fluid" id="form">
+	<input class="form-control" type="hidden" id="inputlatitude" name="latitude"/>
+	<input class="form-control" type="hidden" id="inputlongitude" name="longitude"/>
+
 	<h3>Dados do Local</h3>
 	<div class="row">
 		<div class="col-md-4">
 			<div class="form-group">
-				<label for="inputnomelocal">Nome do Local*</label><br>
+				<label for="inputnomelocal">Nome do Local*</label>
 				<input class="form-control" type="text" id="inputnomelocal" name="nomelocal" placeholder="Nome do Local" />
 			</div>
 			<div class="form-group">
-				<label for="inputcep">CEP*</label><br>
+				<label for="inputcep">CEP*</label>
 				<input class="form-control" type="text" id="inputcep" name="cep" placeholder="ex.: 04015-013" onblur="localizarcep()"/>
 			</div>
 			<div class="form-group">
-				<label for="inputnumero">Número*</label><br>
+				<label for="inputnumero">Número*</label>
 				<input class="form-control" type="text" id="inputnumero" name="numero" placeholder="ex.: 1240"/>
 			</div>
 			<div class="form-group">
-				<label for="inputtelefone">Telefone</label><br>
+				<label for="inputtelefone">Telefone</label>
 				<input class="form-control" type="text" id="inputtelefone" name="telefone" placeholder="ex.: (99) 99999-9999"/>
 			</div>
 		</div>
 		<div class="col-md-4">
 			<div class="form-group">
-				<label for="inputlogradouro">Logradouro*</label><br>
+				<label for="inputlogradouro">Logradouro*</label>
 				<input class="form-control" type="text" id="inputlogradouro" name="logradouro"/>
 			</div>
 			<div class="form-group">
-				<label for="inputbairro">Bairro*</label><br>
+				<label for="inputbairro">Bairro*</label>
 				<input class="form-control" type="text" id="inputbairro" name="bairro"/>
 			</div>
 			<div class="form-group">
-				<label for="inputcidade">Cidade*</label><br>
+				<label for="inputcidade">Cidade*</label>
 				<input class="form-control" type="text" id="inputcidade" name="cidade"/>
 			</div>
 			<div class="form-group">
-				<label for="inputestado">Estado*</label><br>
+				<label for="inputestado">Estado*</label>
 				<input class="form-control" type="text" id="inputestado" name="estado"/>
 			</div>
 		</div>
 		<div class="col-md-4">
 			<h3>Foto do local</h3>
 			<div class="form-group">
-				<label for="foto">Anexar uma Foto</label><br>
+				<label for="foto">Anexar uma Foto</label>
 				<input class="form-control" type="file" id="foto" name="foto"/>
 			</div>
 			<div class="form-group">
@@ -58,10 +61,25 @@
 	</div>
 </form>
 
+<div id="mapa"></div>
+
+<%- contentFor("espaco-head") %>
+
+<link rel="stylesheet" href="/public/css/leaflet-1.7.1.css" />
+
+<style type="text/css">
+	#mapa {
+		height: 400px;
+	}
+</style>
+
+<%- contentFor("espaco-rodape") %>
+
 <script src="/public/js/jquery-validate/jquery.validate.min.js"></script>
 <script src="/public/js/jquery-validate/additional-methods.min.js"></script>
 <script src="/public/js/jquery-validate/localization/methods_pt.min.js"></script>
 <script src="/public/js/jquery-validate/localization/messages_pt_BR.min.js"></script>
+<script src="/public/js/leaflet-1.7.1.js"></script>
 
 <script type="text/javascript" id="verificar-cep">
 	
@@ -361,5 +379,40 @@ async function localizarcep() {
 		}
 
 	}
+
+</script>
+
+<script type="text/javascript" id="script-mapa">
+	let mapa = L.map("mapa", { zoomControl: false }),
+		popup = L.popup();
+
+	function iniciarMapa(lat, lng) {
+		let latlng = new L.LatLng(lat, lng);
+
+		L.control.zoom({
+			position: "topright"
+		}).addTo(mapa);
+
+		L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+			attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>',
+			subdomains: ['a', 'b', 'c'],
+			center: [latlng],
+			minZoom: 5
+		}).addTo(mapa);
+
+		mapa.on("click", function (e) {
+			let inputlatitude = document.getElementById("inputlatitude");
+			let inputlongitude = document.getElementById("inputlongitude");
+			inputlatitude.value = e.latlng.lat;
+			inputlongitude.value = e.latlng.lng;
+			popup.setLatLng([e.latlng.lat, e.latlng.lng]);
+			popup.setContent(`<p>Seu local está aqui! 😁</p>`);
+			popup.openOn(mapa);
+		});
+
+		mapa.setView(latlng, 18);
+	}
+
+	iniciarMapa(-23.587213828191686, -46.644340317344714);
 
 </script>
