@@ -10,11 +10,11 @@
 		<div class="col-md-4">
 			<div class="form-group">
 				<label for="inputnomelocal">Nome do Local*</label><br>
-				<input class="form-control" type="text" id="inputnomelocal" name="nomelocal" placeholder="Nome do Local*" />
+				<input class="form-control" type="text" id="inputnomelocal" name="nomelocal" placeholder="Nome do Local" />
 			</div>
 			<div class="form-group">
 				<label for="inputcep">CEP*</label><br>
-				<input class="form-control" type="text" id="inputcep" name="cep" placeholder="ex.: 04015-013"/>
+				<input class="form-control" type="text" id="inputcep" name="cep" placeholder="ex.: 04015-013" onblur="localizarcep()"/>
 			</div>
 			<div class="form-group">
 				<label for="inputnumero">Número*</label><br>
@@ -63,7 +63,172 @@
 <script src="/public/js/jquery-validate/localization/methods_pt.min.js"></script>
 <script src="/public/js/jquery-validate/localization/messages_pt_BR.min.js"></script>
 
-<script type="text/javascript">
+<script type="text/javascript" id="verificar-cep">
+	
+async function localizarcepClick() {
+    let inputcep = document.getElementById("inputcep");
+    let exprcep = /^\d\d\d\d\d-\d\d\d$/;
+
+    let cep = inputcep.value.normalize().trim();
+
+    //if (cep == "") {
+    //if (!cep || cep.length != 9 || !exprcep.test(cep)) {
+    if (!exprcep.test(cep)) {
+        Swal.fire({
+			icon: "error",
+			title: "Oops...",
+			text: "O CEP inserido está inválido! Por favor, insira um CEP válido!"
+		  });;
+        return;
+    }
+
+    try {
+        //let response = await fetch("http://viacep.com.br/ws/" + cep + "/json/");
+        let response = await fetch(`http://viacep.com.br/ws/${cep}/json/`);
+
+        if (!response.ok) {
+            Swal.fire({
+				icon: "error",
+				title: "Oops...",
+				text: "Erro de rede ao buscar o CEP! Por favor, tente novamente"
+			  });;
+            return;
+        }
+
+        let objeto = await response.json();
+
+        if (objeto.erro) {
+            Swal.fire({
+				icon: "error",
+				title: "Oops...",
+				text: "O CEP inserido está inválido! Por favor, insira um CEP válido!"
+			  });;
+            return;
+        }
+
+        let inputlogradouro = document.getElementById("inputlogradouro");
+        let inputbairro = document.getElementById("inputbairro");
+        let inputestado= document.getElementById("inputestado");
+        let inputcidade = document.getElementById("inputcidade");
+
+        if (objeto.logradouro) {
+            inputlogradouro.value = objeto.logradouro;
+        } else {
+            inputlogradouro.value = "";
+        }
+
+        if (objeto.bairro) {
+            inputbairro.value = objeto.bairro;
+        } else {
+            inputbairro.value = "";
+        }
+
+        if (objeto.uf) {
+            inputestado.value = objeto.estado;
+        } else {
+            inputestado.value = "";
+        }
+
+        if (objeto.localidade) {
+            inputcidade.value = objeto.localidade;
+        } else {
+            inputcidade.value = "";
+        }
+
+    } catch (ex) {
+        Swal.fire({
+			icon: "error",
+			title: "Oops...",
+			text: "Erro de rede ao buscar o CEP! Por favor, tente novamente"
+		  });;
+    }
+}
+
+let ultimocep = "";
+
+async function localizarcep() {
+    let inputcep = document.getElementById("inputcep");
+    let exprcep = /^\d\d\d\d\d-\d\d\d$/;
+
+    let cep = inputcep.value.normalize().trim();
+
+    //if (cep == "") {
+    //if (!cep || cep.length != 9 || !exprcep.test(cep)) {
+    if (!exprcep.test(cep)) {
+        //alert("cep inválido");
+        return;
+    }
+
+    if (ultimocep === cep) {
+        return;
+    }
+
+    try {
+        //let response = await fetch("http://viacep.com.br/ws/" + cep + "/json/");
+        let response = await fetch(`http://viacep.com.br/ws/${cep}/json/`);
+
+        ultimocep = cep;
+
+        if (!response.ok) {
+            Swal.fire({
+				icon: "error",
+				title: "Oops...",
+				text: "O CEP inserido está inválido! Por favor, insira um CEP válido!"
+			  });;
+            return;
+        }
+
+        let objeto = await response.json();
+
+        if (objeto.erro) {
+            Swal.fire({
+				icon: "error",
+				title: "Oops...",
+				text: "O CEP inserido está inválido! Por favor, insira um CEP válido!"
+			  });;
+            return;
+        }
+
+        let inputlogradouro = document.getElementById("inputlogradouro");
+        let inputbairro = document.getElementById("inputbairro");
+        let inputestado = document.getElementById("inputestado");
+        let inputcidade = document.getElementById("inputcidade");
+
+        if (objeto.logradouro) {
+            inputlogradouro.value = objeto.logradouro;
+        } else {
+            inputlogradouro.value = "";
+        }
+
+        if (objeto.bairro) {
+            inputbairro.value = objeto.bairro;
+        } else {
+            inputbairro.value = "";
+        }
+
+        if (objeto.uf) {
+            inputestado.value = objeto.uf;
+        } else {
+            inputestado.value = "";
+        }
+
+        if (objeto.localidade) {
+            inputcidade.value = objeto.localidade;
+        } else {
+            inputcidade.value = "";
+        }
+
+    } catch (ex) {
+		Swal.fire({
+			icon: "error",
+			title: "Oops...",
+			text: "Erro de rede ao buscar o CEP! Por favor, tente novamente"
+		  });;
+    }
+}
+</script>
+
+<script type="text/javascript" id="criar-local">
 
 	$("#form").validate({
 		rules: {
@@ -184,6 +349,8 @@
 				text: "Cadastro realizado com sucesso!",
 				icon: "success"
 			  });;
+			
+			form.reset();
 
 		} catch (ex) {
 			Swal.fire({
