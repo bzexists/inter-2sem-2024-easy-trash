@@ -1,0 +1,129 @@
+<div class="fundo-titulo">
+    <h1 class="text-center pb-3">
+        Localize o local de descarte mais próximo de você!
+    </h1>
+</div>
+
+<div class="table-responsive">
+    <table class="table table-striped mb-0">
+        <tr>
+            <th class="d-none">Id</th>
+            <th>Nome do Local</th>
+            <th>Logradouro</th>
+            <th>Número</th>
+            <th>Bairro</th>
+            <th>Cidade</th>
+            <th>Estado</th>
+            <th>CEP</th>
+            <th>Telefone</th>
+            <th></th>
+        </tr>
+        <tbody>
+    
+            <% for (let i = 0; i < ecopontos.length; i++) { %>
+                <tr>
+                    <td class="d-none">
+                        <%= ecopontos[i].id %>
+                    </td>
+                    <td>
+                        <%= ecopontos[i].nomelocal %>
+                    </td>
+                    <td>
+                        <%= ecopontos[i].logradouro %>
+                    </td>
+                    <td>
+                        <%= ecopontos[i].numero %>
+                    </td>
+                    <td>
+                        <%= ecopontos[i].bairro %>
+                    </td>
+                    <td>
+                        <%= ecopontos[i].cidade %>
+                    </td>
+                    <td>
+                        <%= ecopontos[i].estado %>
+                    </td>
+                    <td>
+                        <%= ecopontos[i].cep %>
+                    </td>
+                    <td>
+                        <%= ecopontos[i].telefone %>
+                    </td>
+                    <td class="d-none">
+                        <%= ecopontos[i].latitude %>
+                    </td>
+                    <td class="d-none">
+                        <%= ecopontos[i].longitude %>
+                    </td>
+                    <td>
+                        <button type="button" onclick="detalheslocal(this)" class="btn btn-primary btn-block btn-lg">Saiba Mais!</button>
+                    </td>
+                </tr>
+            <% } %>		
+        </tbody>
+    </table>
+</div>
+<script type="text/javascript" id="detalheslocal">
+    async function detalheslocal(botao){
+        debugger;
+        let td = botao.parentNode;
+        let tr = td.parentNode;
+        let tds = tr.getElementsByTagName("td");
+        let id = tds[0].textContent.trim();
+        let nomelocal = tds[1].innerHTML;
+        let logradouro = tds[2].innerHTML;
+        let numero = tds[3].innerHTML;
+        let bairro = tds[4].innerHTML;
+        let cidade = tds[5].innerHTML;
+        let estado = tds[6].innerHTML;
+        let cep = tds[7].innerHTML;
+        let telefone = tds[8].innerHTML;
+
+        Swal.fire({
+            title: `${nomelocal}`,
+            html: `
+                <p>${logradouro}, ${numero} - ${bairro}, ${cidade} - ${estado}, ${cep}</p>
+                <p>Telefone: ${telefone}</p>
+            `,
+            imageUrl: `/public/img/local/${id}.jpg`,
+            imageWidth: 400,
+            imageHeight: 200,
+            imageAlt: "Custom image",
+            showDenyButton: true,
+            showCancelButton: true,
+            confirmButtonText: "Alterar",
+            denyButtonText: `Deletar`,
+            cancelButtonText: "Cancelar"
+          }).then((result) => {
+            /* Read more about isConfirmed, isDenied below */
+            if (result.isConfirmed) {
+              /*levar para pagina de alteração*/
+              window.location.href='alterar';
+            } else if (result.isDenied) {
+                Swal.fire({
+                    title: "Você tem certeza?",
+                    text: "Essa ação não poderá ser revertida!!",
+                    icon: "warning",
+                    showCancelButton: true,
+                    cancelButtonText: "Cancelar",
+                    confirmButtonColor: "#3085d6",
+                    cancelButtonColor: "#d33",
+                    confirmButtonText: "Sim, delete isso."
+                  }).then((result) => {
+                    if (result.isConfirmed) {
+                      Swal.fire({
+                        title: "Deletado!",
+                        text: "O local foi deletado com sucesso.",
+                        icon: "success"
+                      });
+                    }
+                  });
+            }
+          });
+          
+        
+    }
+</script>
+
+
+

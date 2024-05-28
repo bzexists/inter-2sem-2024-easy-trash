@@ -1,0 +1,418 @@
+<div class="pb-5">
+	<div class="py-3">
+		<h1>Altere aqui um local de coleta</h1>
+	</div>
+</div>
+
+<form class="container-fluid" id="form">
+	<input class="form-control" type="hidden" id="altlatitude" name="latitude" value="<%= ecopontos.lattitude %>"/>
+	<input class="form-control" type="hidden" id="altlongitude" name="longitude" value="<%= ecopontos.longitude %>"/>
+
+	<h3>Dados do Local</h3>
+	<div class="row">
+		<div class="col-md-4">
+			<div class="form-group">
+				<label for="inputnomelocal">Nome do Local*</label>
+				<input class="form-control" type="text" id="altnomelocal" name="nomelocal" placeholder="Nome do Local" value="<%= ecopontos.nomelocal %>"/>
+			</div>
+			<div class="form-group">
+				<label for="inputcep">CEP*</label>
+				<input class="form-control" type="text" id="altcep" name="cep" placeholder="ex.: 04015-013" onblur="localizarcep()" value="<%= ecopontos.cep %>"/>
+			</div>
+			<div class="form-group">
+				<label for="inputnumero">Número*</label>
+				<input class="form-control" type="text" id="altnumero" name="numero" placeholder="ex.: 1240" value="<%= ecopontos.numero %>"/>
+			</div>
+			<div class="form-group">
+				<label for="inputtelefone">Telefone</label>
+				<input class="form-control" type="text" id="alttelefone" name="telefone" placeholder="ex.: (99) 99999-9999" value="<%= ecopontos.telefone %>"/>
+			</div>
+		</div>
+		<div class="col-md-4">
+			<div class="form-group">
+				<label for="inputlogradouro">Logradouro*</label>
+				<input class="form-control" type="text" id="altlogradouro" name="logradouro" value="<%= ecopontos.logradouro %>"/>
+			</div>
+			<div class="form-group">
+				<label for="inputbairro">Bairro*</label>
+				<input class="form-control" type="text" id="altbairro" name="bairro" value="<%= ecopontos.bairro %>"/>
+			</div>
+			<div class="form-group">
+				<label for="inputcidade">Cidade*</label>
+				<input class="form-control" type="text" id="altcidade" name="cidade" value="<%= ecopontos.cidade %>"/>
+			</div>
+			<div class="form-group">
+				<label for="inputestado">Estado*</label>
+				<input class="form-control" type="text" id="altestado" name="estado" value="<%= ecopontos.estado %>"/>
+			</div>
+		</div>
+		<div class="col-md-4">
+			<h3>Foto do local</h3>
+			<div class="form-group">
+				<label for="foto">Anexar uma Foto</label>
+				<input class="form-control" type="file" id="foto" name="foto"/>
+			</div>
+			<div class="form-group">
+				<button type="submit" class="btn btn-primary btn-block btn-lg">
+					Criar Local
+				</button>
+			</div>
+		</div>
+	</div>
+</form>
+
+<div id="mapa"></div>
+
+<%- contentFor("espaco-head") %>
+
+<link rel="stylesheet" href="/public/css/leaflet-1.7.1.css" />
+
+<style type="text/css">
+	#mapa {
+		height: 400px;
+	}
+</style>
+
+<%- contentFor("espaco-rodape") %>
+
+<script src="/public/js/jquery-validate/jquery.validate.min.js"></script>
+<script src="/public/js/jquery-validate/additional-methods.min.js"></script>
+<script src="/public/js/jquery-validate/localization/methods_pt.min.js"></script>
+<script src="/public/js/jquery-validate/localization/messages_pt_BR.min.js"></script>
+<script src="/public/js/leaflet-1.7.1.js"></script>
+
+<script type="text/javascript" id="verificar-cep">
+	
+async function localizarcepClick() {
+    let altcep = document.getElementById("altcep");
+    let exprcep = /^\d\d\d\d\d-\d\d\d$/;
+
+    let cep = altcep.value.normalize().trim();
+
+    //if (cep == "") {
+    //if (!cep || cep.length != 9 || !exprcep.test(cep)) {
+    if (!exprcep.test(cep)) {
+        Swal.fire({
+			icon: "error",
+			title: "Oops...",
+			text: "O CEP inserido está inválido! Por favor, insira um CEP válido!"
+		  });;
+        return;
+    }
+
+    try {
+        //let response = await fetch("http://viacep.com.br/ws/" + cep + "/json/");
+        let response = await fetch(`http://viacep.com.br/ws/${cep}/json/`);
+
+        if (!response.ok) {
+            Swal.fire({
+				icon: "error",
+				title: "Oops...",
+				text: "Erro de rede ao buscar o CEP! Por favor, tente novamente"
+			  });;
+            return;
+        }
+
+        let objeto = await response.json();
+
+        if (objeto.erro) {
+            Swal.fire({
+				icon: "error",
+				title: "Oops...",
+				text: "O CEP inserido está inválido! Por favor, insira um CEP válido!"
+			  });;
+            return;
+        }
+
+        let altlogradouro = document.getElementById("altlogradouro");
+        let altbairro = document.getElementById("altbairro");
+        let altestado= document.getElementById("altestado");
+        let altcidade = document.getElementById("altcidade");
+
+        if (objeto.logradouro) {
+            altlogradouro.value = objeto.logradouro;
+        } else {
+            altlogradouro.value = "";
+        }
+
+        if (objeto.bairro) {
+            altbairro.value = objeto.bairro;
+        } else {
+            altbairro.value = "";
+        }
+
+        if (objeto.uf) {
+            altestado.value = objeto.estado;
+        } else {
+            altestado.value = "";
+        }
+
+        if (objeto.localidade) {
+            altcidade.value = objeto.localidade;
+        } else {
+            altcidade.value = "";
+        }
+
+    } catch (ex) {
+        Swal.fire({
+			icon: "error",
+			title: "Oops...",
+			text: "Erro de rede ao buscar o CEP! Por favor, tente novamente"
+		  });;
+    }
+}
+
+let ultimocep = "";
+
+async function localizarcep() {
+    let altcep = document.getElementById("altcep");
+    let exprcep = /^\d\d\d\d\d-\d\d\d$/;
+
+    let cep = altcep.value.normalize().trim();
+
+    //if (cep == "") {
+    //if (!cep || cep.length != 9 || !exprcep.test(cep)) {
+    if (!exprcep.test(cep)) {
+        //alert("cep inválido");
+        return;
+    }
+
+    if (ultimocep === cep) {
+        return;
+    }
+
+    try {
+        //let response = await fetch("http://viacep.com.br/ws/" + cep + "/json/");
+        let response = await fetch(`http://viacep.com.br/ws/${cep}/json/`);
+
+        ultimocep = cep;
+
+        if (!response.ok) {
+            Swal.fire({
+				icon: "error",
+				title: "Oops...",
+				text: "O CEP inserido está inválido! Por favor, insira um CEP válido!"
+			  });;
+            return;
+        }
+
+        let objeto = await response.json();
+
+        if (objeto.erro) {
+            Swal.fire({
+				icon: "error",
+				title: "Oops...",
+				text: "O CEP inserido está inválido! Por favor, insira um CEP válido!"
+			  });;
+            return;
+        }
+
+        let altlogradouro = document.getElementById("altlogradouro");
+        let altbairro = document.getElementById("altbairro");
+        let altestado = document.getElementById("altestado");
+        let altcidade = document.getElementById("altcidade");
+
+        if (objeto.logradouro) {
+            altlogradouro.value = objeto.logradouro;
+        } else {
+            altlogradouro.value = "";
+        }
+
+        if (objeto.bairro) {
+            altbairro.value = objeto.bairro;
+        } else {
+            altbairro.value = "";
+        }
+
+        if (objeto.uf) {
+            altestado.value = objeto.uf;
+        } else {
+            altestado.value = "";
+        }
+
+        if (objeto.localidade) {
+            altcidade.value = objeto.localidade;
+        } else {
+            altcidade.value = "";
+        }
+
+    } catch (ex) {
+		Swal.fire({
+			icon: "error",
+			title: "Oops...",
+			text: "Erro de rede ao buscar o CEP! Por favor, tente novamente"
+		  });;
+    }
+}
+</script>
+
+<script type="text/javascript" id="criar-local">
+
+	$("#form").validate({
+		rules: {
+			nomelocal: {
+				required: true
+			},
+			cep: {
+				required: true
+			},
+			numero: {
+				required: true
+			},
+			telefone: {
+				required: true
+			},
+			logradouro: {
+				required: true
+			},
+			bairro: {
+				required: true
+			},
+			cidade: {
+				required: true
+			},
+			estado: {
+				required: true
+			},
+		},
+		submitHandler: function (form) {
+			criarLocal(form);
+		}
+	});
+	async function criarLocal() {
+		/*
+		let inputnomelocal = document.getElementById("inputnomelocal");
+		let inputcep = document.getElementById("inputcep");
+		let inputnumero = document.getElementById("inputnumero");
+		let inputtelefone = document.getElementById("inputtelefone");
+		let inputlogradouro = document.getElementById("inputlogradouro");
+		let inputbairro = document.getElementById("inputbairro");
+		let inputcidade = document.getElementById("inputcidade");
+		let inputestado = document.getElementById("inputestado");
+
+		let nomelocal = inputnomelocal.value;
+		let cep = inputcep.value;
+		let numero = inputnumero.value;
+		let telefone = inputtelefone.value;
+		let logradouro = inputlogradouro.value;
+		let bairro = inputbairro.value;
+		let cidade = inputcidade.value;
+		let estado = inputestado.value;
+
+		if (!nomelocal) {
+			alert("Nome inválido!");
+			return;
+		}
+
+		if (!cep) {
+			alert("cep inválido!");
+			return;
+		}
+
+		if (!numero) {
+			alert("numero inválido!");
+			return;
+		}
+
+		if (!telefone) {
+			alert("telefone inválido!");
+			return;
+		}
+
+		if (!logradouro) {
+			alert("logradouro inválido!");
+			return;
+		}
+
+		if (!bairro) {
+			alert("bairro inválido!");
+			return;
+		}
+
+		if (!cidade) {
+			alert("cidade inválido!");
+			return;
+		}
+
+		if (!estado) {
+			alert("estado inválido!");
+			return;
+		}
+		*/
+
+		try {
+			let response = await fetch("/criarLocal", {
+				method: "POST",
+				body: new FormData(form)
+			});
+
+			if (!response.ok) {
+				exibirErro(response);
+				return;
+			}
+
+			/*
+			inputnomelocal.value = "";
+			inputcep.value = "";
+			letinputnumero.value = "";
+			letinputtelefone.value = "";
+			inputlogradouro.value = "";
+			inputbairro.value = "";
+			inputcidade.value = "";
+			inputestado.value = "";
+			*/
+ 
+			Swal.fire({
+				title: "Ebaa!",
+				text: "Cadastro realizado com sucesso!",
+				icon: "success"
+			  });;
+			
+			form.reset();
+
+		} catch (ex) {
+			Swal.fire({
+				icon: "error",
+				title: "Oops...",
+				text: "Ocorreu um problema de rede ao cadastrar o local: " + ex.message
+			  });; 
+		}
+
+	}
+
+</script>
+
+<script type="text/javascript" id="script-mapa">
+	let mapa = L.map("mapa", { zoomControl: false }),
+		popup = L.popup();
+
+	function iniciarMapa(lat, lng) {
+		let latlng = new L.LatLng(lat, lng);
+
+		L.control.zoom({
+			position: "topright"
+		}).addTo(mapa);
+
+		L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+			attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>',
+			subdomains: ['a', 'b', 'c'],
+			center: [latlng],
+			minZoom: 5
+		}).addTo(mapa);
+
+		mapa.on("click", function (e) {
+			let inputlatitude = document.getElementById("inputlatitude");
+			let inputlongitude = document.getElementById("inputlongitude");
+			inputlatitude.value = e.latlng.lat;
+			inputlongitude.value = e.latlng.lng;
+			popup.setLatLng([e.latlng.lat, e.latlng.lng]);
+			popup.setContent(`<p>Seu local está aqui! 😁</p>`);
+			popup.openOn(mapa);
+		});
+
+		mapa.setView(latlng, 18);
+	}
+
+	iniciarMapa('<%= ecopontos.lattitude %>', '<%= ecopontos.lattitude %>');
+
+</script>

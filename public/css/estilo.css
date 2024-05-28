@@ -159,3 +159,7 @@ html, body {
     border-radius: 100px;
     z-index: 2;
 }
+
+.fundo-titulo{
+    background-color:#cfcfcf
+}
