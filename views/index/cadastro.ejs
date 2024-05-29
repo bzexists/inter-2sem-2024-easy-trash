@@ -5,8 +5,8 @@
 </div>
 
 <form class="container-fluid" id="form">
-	<input class="form-control" type="hidden" id="inputlatitude" name="latitude"/>
-	<input class="form-control" type="hidden" id="inputlongitude" name="longitude"/>
+	<input class="form-control" type="hidden" id="inputlat" name="lat"/>
+	<input class="form-control" type="hidden" id="inputlng" name="lng"/>
 
 	<h3>Dados do Local</h3>
 	<div class="row">
@@ -279,7 +279,7 @@ async function localizarcep() {
 			criarLocal(form);
 		}
 	});
-	async function criarLocal() {
+	async function criarLocal(form) {
 		/*
 		let inputnomelocal = document.getElementById("inputnomelocal");
 		let inputcep = document.getElementById("inputcep");
@@ -401,10 +401,10 @@ async function localizarcep() {
 		}).addTo(mapa);
 
 		mapa.on("click", function (e) {
-			let inputlatitude = document.getElementById("inputlatitude");
-			let inputlongitude = document.getElementById("inputlongitude");
-			inputlatitude.value = e.latlng.lat;
-			inputlongitude.value = e.latlng.lng;
+			let inputlat = document.getElementById("inputlat");
+			let inputlng = document.getElementById("inputlng");
+			inputlat.value = e.latlng.lat;
+			inputlng.value = e.latlng.lng;
 			popup.setLatLng([e.latlng.lat, e.latlng.lng]);
 			popup.setContent(`<p>Seu local está aqui! 😁</p>`);
 			popup.openOn(mapa);

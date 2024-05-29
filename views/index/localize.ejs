@@ -20,40 +20,40 @@
         </tr>
         <tbody>
     
-            <% for (let i = 0; i < ecopontos.length; i++) { %>
+            <% for (let i = 0; i < ecoponto.length; i++) { %>
                 <tr>
                     <td class="d-none">
-                        <%= ecopontos[i].id %>
+                        <%= ecoponto[i].id %>
                     </td>
                     <td>
-                        <%= ecopontos[i].nomelocal %>
+                        <%= ecoponto[i].nomelocal %>
                     </td>
                     <td>
-                        <%= ecopontos[i].logradouro %>
+                        <%= ecoponto[i].logradouro %>
                     </td>
                     <td>
-                        <%= ecopontos[i].numero %>
+                        <%= ecoponto[i].numero %>
                     </td>
                     <td>
-                        <%= ecopontos[i].bairro %>
+                        <%= ecoponto[i].bairro %>
                     </td>
                     <td>
-                        <%= ecopontos[i].cidade %>
+                        <%= ecoponto[i].cidade %>
                     </td>
                     <td>
-                        <%= ecopontos[i].estado %>
+                        <%= ecoponto[i].estado %>
                     </td>
                     <td>
-                        <%= ecopontos[i].cep %>
+                        <%= ecoponto[i].cep %>
                     </td>
                     <td>
-                        <%= ecopontos[i].telefone %>
+                        <%= ecoponto[i].telefone %>
                     </td>
                     <td class="d-none">
-                        <%= ecopontos[i].latitude %>
+                        <%= ecoponto[i].lat %>
                     </td>
                     <td class="d-none">
-                        <%= ecopontos[i].longitude %>
+                        <%= ecoponto[i].lng %>
                     </td>
                     <td>
                         <button type="button" onclick="detalheslocal(this)" class="btn btn-primary btn-block btn-lg">Saiba Mais!</button>
@@ -98,7 +98,7 @@
             /* Read more about isConfirmed, isDenied below */
             if (result.isConfirmed) {
               /*levar para pagina de alteração*/
-              window.location.href='alterar';
+              window.location.href='/alterar?id=' + id;
             } else if (result.isDenied) {
                 Swal.fire({
                     title: "Você tem certeza?",
@@ -111,11 +111,7 @@
                     confirmButtonText: "Sim, delete isso."
                   }).then((result) => {
                     if (result.isConfirmed) {
-                      Swal.fire({
-                        title: "Deletado!",
-                        text: "O local foi deletado com sucesso.",
-                        icon: "success"
-                      });
+                      
                     }
                   });
             }
@@ -123,6 +119,45 @@
           
         
     }
+    
+	async function excluirLocal(id) {
+		if (!confirm("Excluir a pessoa?")) {
+			return;
+		}
+
+		// A única informação enviada aqui é o id, que pode ser enviado diretamente
+		// pela query string, sem necessitar do uso do body.
+
+		// O método escolhido é DELETE, e não GET, apenas por questões semânticas,
+		// afinal GET é para obter algo sem alterações, o que não ocorre aqui! ;)
+		let opcoes = {
+			method: "DELETE"
+		};
+
+		try {
+			let response = await fetch("/excluirLocal?id=" + id, opcoes);
+
+			if (response.ok) {
+				Swal.fire({
+                    title: "Deletado!",
+                    text: "O local foi deletado com sucesso.",
+                    icon: "success"
+                  });
+
+				let divPessoa = document.getElementById("divPessoa" + id);
+				document.body.removeChild(divPessoa);
+			} else {
+				Swal.fire({
+                    title: "Oops",
+                    text: "Erro ao excluir o local!",
+                    icon: "error"
+                  });
+			}
+		} catch (ex) {
+			alert("Erro de rede: " + ex.message);
+		}
+	}
+
 </script>
 
 
