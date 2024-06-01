@@ -111,7 +111,7 @@
                     confirmButtonText: "Sim, delete isso."
                   }).then((result) => {
                     if (result.isConfirmed) {
-                      
+                      excluirLocal(id);
                     }
                   });
             }
@@ -121,10 +121,6 @@
     }
     
 	async function excluirLocal(id) {
-		if (!confirm("Excluir a pessoa?")) {
-			return;
-		}
-
 		// A única informação enviada aqui é o id, que pode ser enviado diretamente
 		// pela query string, sem necessitar do uso do body.
 
@@ -144,8 +140,8 @@
                     icon: "success"
                   });
 
-				let divPessoa = document.getElementById("divPessoa" + id);
-				document.body.removeChild(divPessoa);
+				/*let divPessoa = document.getElementById("divPessoa" + id);
+				document.body.removeChild(divPessoa);*/
 			} else {
 				Swal.fire({
                     title: "Oops",

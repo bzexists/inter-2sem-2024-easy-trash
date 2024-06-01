@@ -342,7 +342,11 @@ async function localizarcep() {
 
 		mapa.setView(latlng, 18);
 	}
-
-	iniciarMapa(-23.587213828191686, -46.644340317344714);
+	let altlati = document.getElementById("altlat");
+	let lati = altlati.value;
+	let altlngi = document.getElementById("altlng");
+	let lngi = altlngi.value;
+	
+	iniciarMapa(lati, alti);
 
 </script>
