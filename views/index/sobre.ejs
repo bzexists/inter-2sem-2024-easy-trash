@@ -42,8 +42,9 @@
             background-color: #f8f9fa;
             padding: 20px 0;
         }
-        .footer img {
-            width: 50px;
+        .footer-img {
+            width: 100%; /* Define a largura da imagem como 100% */
+            display: block; /* Garante que a imagem seja exibida como um bloco */
             margin-bottom: 10px;
         }
         .footer p {
@@ -59,6 +60,14 @@
         .container-fluid {
             padding: 20px;
         }
+        .footer-social {
+            display: inline-block;
+            margin-right: 10px;
+        }
+        .footer-social img {
+            width: 30px; /* Definindo o tamanho das imagens do Instagram e LinkedIn */
+            height: 30px;
+        }
     </style>
 </head>
 <body>
@@ -69,9 +78,9 @@
             <div class="col d-flex flex-column justify-content-center">
                 <h1 class="text-center">Sobre Nós</h1>
             </div>
-			<div class="pb-5">
-				<p>A esyTrash surgiu de uma ideia do visionario Fernando Adami, estudante de sistemas de informação, motivado por uma vida mais sustentavel e por sua paixão ao planeta e o meio ambiente. Fernando decidiu se juntar a Isabelle e Henrique para tornar sua visão realidade. Com a ideia e equipe formadas o trabalho começou e após meses de trabalho duro, reuniões importantes e noites em claro a easyTrash surgiu e de cara dominou o mercado</p>
-			</div>
+            <div class="pb-5">
+                <p>A esyTrash surgiu de uma ideia do visionario Fernando Adami, estudante de sistemas de informação, motivado por uma vida mais sustentavel e por sua paixão ao planeta e o meio ambiente. Fernando decidiu se juntar a Isabelle e Henrique para tornar sua visão realidade. Com a ideia e equipe formadas o trabalho começou e após meses de trabalho duro, reuniões importantes e noites em claro a easyTrash surgiu e de cara dominou o mercado</p>
+            </div>
             <div class="col">
                 <img src="public/img/pulo.jpg" alt="">
             </div>
@@ -111,9 +120,12 @@
             <p>(11) 99489-6739</p>
             <p><a href="mailto:easyTrash@gmail.com">easyTrash@gmail.com</a></p>
             <div>
-                <a href="#"><img src="public/img/linkedin.png" alt="LinkedIn"></a>
-                <a href="#"><img src="public/img/instagram.png" alt="Instagram"></a>
+                <a class="footer-social" href="#"><img src="public/img/linkedin.png" alt="LinkedIn"></a>
+                <a class="footer-social" href="#"><img src="public/img/instagram.png" alt="Instagram"></a>
             </div>
+        </div>
+        <div>
+            <img class="footer-img" src="public/img/footer.png" alt="">
         </div>
     </footer>
 
