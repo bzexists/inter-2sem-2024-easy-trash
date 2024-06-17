@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -5,20 +6,99 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Easy Trash</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Galindo&display=swap" rel="stylesheet">
     <style>
-        
+        body {
+            font-family: "Montserrat", sans-serif;
+            font-size: 16px;
+        }
+
+        h1 {
+            font-family: "Galindo", sans-serif;
+            font-weight: 800;
+            font-size: 55px;
+            text-align: left;
+            color: #25676D; 
+        }
+
+        h2 {
+            font-family: "Galindo", sans-serif;
+            font-weight: 800;
+            font-size: 40px;
+            text-align: center;
+            color: #25676D; 
+        }
+
+        h3 {
+            font-family: "Galindo", sans-serif;
+            font-weight: 800;
+            font-size: 25px;
+            color: #25676D; 
+        }
+
+        p {
+            font-family: "Montserrat", sans-serif;
+            color: #25676D; 
+            font-size: 1rem;
+        }
+
+        .container-fluid.pb-5.mt-20 {
+            background-color: #FFF2E5; 
+            color: #25676D; 
+            padding-top: 3rem;
+            padding-bottom: 3rem;
+        }
+
+        .container-fluid.pb-5.mt-20 h1 {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .container-fluid.pb-5.mt-20 p {
+            font-size: 1rem;
+        }
+
+        .container-fluid.pb-5.mt-20 img {
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .container-fluid .row.text-center {
+            background-color: #ffffff;
+            padding-top: 3rem;
+            padding-bottom: 3rem;
+        }
+
+        .fundo-coluna {
+            padding: 15px;
+            margin-bottom: 2rem;
+        }
+
+        .img-staff {
+            border-radius: 50%;
+            max-width: 200px;
+            width: 100%;
+        }
+
+        h3 {
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        p {
+            color: #25676D; 
+            font-size: 1rem;
+        }
     </style>
 </head>
 <body>
-    
-    
     <div class="container-fluid pb-5 mt-20">
         <div class="row">
             <div class="col d-flex flex-column justify-content-center">
-                <h1 class="text-center">Sobre Nós</h1>
-            </div>
-            <div class="pb-5">
-                <p>A esyTrash surgiu de uma ideia do visionario Fernando Adami, estudante de sistemas de informação, motivado por uma vida mais sustentavel e por sua paixão ao planeta e o meio ambiente. Fernando decidiu se juntar a Isabelle e Henrique para tornar sua visão realidade. Com a ideia e equipe formadas o trabalho começou e após meses de trabalho duro, reuniões importantes e noites em claro a easyTrash surgiu e de cara dominou o mercado</p>
+                <h1 class="text-center">Nossa História</h1>
+                <p>A easyTrash surgiu da ideia visionária de Fernando Adami, estudante de sistemas de informação motivado pela sustentabilidade e paixão pelo meio ambiente. Junto com Isabelle e Henrique, que trouxeram habilidades em gestão de projetos e desenvolvimento de software, Fernando formou uma equipe dedicada. Após meses de trabalho árduo, reuniões e noites em claro, a easyTrash nasceu, pronta para revolucionar o descarte e a reciclagem de resíduos.
+
+                    Desde o seu lançamento, a easyTrash dominou o mercado, conquistando a confiança de consumidores e parceiros com sua plataforma prática e eficiente. Além de facilitar o descarte correto, a empresa promove a educação ambiental e a conscientização sobre sustentabilidade, cumprindo a visão de Fernando e contribuindo para um futuro mais verde.</p>
             </div>
             <div class="col">
                 <img src="public/img/pulo.jpg" alt="">
@@ -27,46 +107,25 @@
     </div>
     
     
-    <div>
-        <h2 class="text-center">Nossa Equipe</h2>
-        <hr class="linha-meio">
-    </div>
     <div class="container-fluid">
         <div class="row text-center">
             <div class="col-md-4 fundo-coluna align-content-center">
-                <img class="img-staff rounded-circle" src="public/img/Fernando.jpg" alt="">
+                <img class="img-staff circle" src="public/img/Fernando.jpg" alt="">
                 <h3>Fernando Hasellof</h3>
                 <p>Com foco na parte administrativa, Fernando Sabella é um líder comprometido em garantir a eficiência e a otimização dos processos internos. Sua vasta experiência em gerenciamento de projetos e operações é fundamental para manter o funcionamento suave e eficaz de nossa equipe e operações comerciais.</p>
             </div>
             <div class="col-md-4 fundo-coluna align-content-center">
-                <img class="img-staff rounded-circle" src="public/img/Isa.jpg" alt="">
+                <img class="img-staff circle" src="public/img/Isa.jpg" alt="">
                 <h3>Isabelle Dib</h3>
                 <p>Isabelle Dib é especialista na área de dados, trazendo consigo uma vasta experiência em análise e interpretação de informações complexas. Sua expertise em gerenciamento de dados é crucial para o desenvolvimento de estratégias eficazes e orientadas por dados para nossos clientes.</p>
             </div>
             <div class="col-md-4 fundo-coluna align-content-center">
-                <img class="img-staff rounded-circle" src="public/img/Henrique.JPG" alt="">
+                <img class="img-staff circle" src="public/img/Henrique.JPG" alt="">
                 <h3>Henrique Lecce</h3>
                 <p>Henrique Lecce é um líder visionário especializado em UX (Experiência do Usuário) com habilidades excepcionais em combinar cores e arte. Sua formação em design centrado no usuário e sensibilidade artística garantem que nossos produtos digitais sejam funcionais e visualmente cativantes.</p>
             </div>
         </div>
     </div>
-    
-    <footer class="footer text-center">
-        <div class="container">
-            <img src="public/img/logo.png" alt="Logo EasyTrash">
-            <p>SISTEMAS DE INFORMAÇÃO ESPM</p>
-            <p>R. Joaquim Távora 1240</p>
-            <p>(11) 99489-6739</p>
-            <p><a href="mailto:easyTrash@gmail.com">easyTrash@gmail.com</a></p>
-            <div>
-                <a class="footer-social" href="#"><img src="public/img/linkedin.png" alt="LinkedIn"></a>
-                <a class="footer-social" href="#"><img src="public/img/instagram.png" alt="Instagram"></a>
-            </div>
-        </div>
-        <div>
-            <img class="footer-img" src="public/img/footer.png" alt="">
-        </div>
-    </footer>
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
