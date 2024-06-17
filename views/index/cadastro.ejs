@@ -1,6 +1,6 @@
 <div class="pb-5">
 	<div class="py-3">
-		<h1>Cadastre aqui um local de coleta</h1>
+		<h1>Cadastre aqui <br> um local de coleta</h1>
 	</div>
 </div>
 
@@ -66,11 +66,98 @@
 <%- contentFor("espaco-head") %>
 
 <link rel="stylesheet" href="/public/css/leaflet-1.7.1.css" />
-
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Saira+Stencil+One&family=Galindo&family=Goldman&display=swap">
 <style type="text/css">
 	#mapa {
 		height: 400px;
 	}
+
+	body {
+            font-family: 'Goldman', sans-serif;
+            color: #215439;
+        }
+
+        h1, h3 {
+            font-family: 'Saira Stencil One', 'Galindo', sans-serif;
+            color: #215439;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            text-align: center;
+        }
+
+        h3 {
+            font-size: 1.5em;
+            margin-top: 20px;
+        }
+
+        .form-control {
+            margin-bottom: 15px;
+        }
+
+        label {
+            font-size: 1.2em;
+            margin-top: 10px;
+        }
+
+        .btn-primary {
+            background-color: #3DAD71;
+            border-color: #3DAD71;
+            font-size: 1.2em;
+        }
+
+        .btn-primary:hover {
+            background-color: #2A8B57;
+            border-color: #2A8B57;
+        }
+
+        #mapa {
+            height: 400px;
+            margin-top: 20px;
+        }
+
+        .pb-5 {
+            padding-bottom: 3rem;
+        }
+
+        .py-3 {
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+        }
+
+        .container-fluid {
+            padding: 0 2rem;
+        }
+
+        .row {
+            margin-bottom: 1rem;
+        }
+
+        /* Formulário */
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        #foto {
+            margin-top: 10px;
+        }
+
+        /* Responsividade */
+        @media (max-width: 768px) {
+            .col-md-4 {
+                margin-bottom: 1.5rem;
+            }
+
+            h1 {
+                font-size: 2em;
+            }
+
+            h3 {
+                font-size: 1.3em;
+            }
+        }
+
 </style>
 
 <%- contentFor("espaco-rodape") %>
