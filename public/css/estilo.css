@@ -27,6 +27,7 @@ body{
     font-style: normal;
     font-size: 16px;
 }
+
 img {
 	max-width: 100%;
 }
@@ -63,8 +64,26 @@ html, body {
 
 .rodape {
 	text-align: center;
-	background-color: black;
-	padding: 2rem;
+	padding: 6rem 0 0;
+}
+
+.rodape-fundo {
+    position: relative;
+    padding: 2rem 2rem 8rem;
+    background-color: #362007;
+    background-image: url(/public/img/footer.png);
+    background-size: 100% auto;
+    background-position: left bottom;
+    background-repeat: no-repeat;
+}
+
+.rodape-img {
+    position: absolute;
+    width: 100%;
+    height: 14rem;
+    left: 0;
+    top: -6rem;
+    pointer-events: none;
 }
 
 .link-rodape, .link-rodape:hover {
