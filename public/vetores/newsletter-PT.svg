@@ -1,18 +1,30 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!-- Created with Inkscape (http://www.inkscape.org/) -->
-
 <svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    width="291.53644mm"
    height="41.797871mm"
    viewBox="0 0 291.53644 41.797871"
    version="1.1"
    id="svg1"
-   inkscape:version="1.3.2 (091e20e, 2023-11-25, custom)"
-   sodipodi:docname="newsletter-PT.svg"
-   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
-   xmlns="http://www.w3.org/2000/svg"
-   xmlns:svg="http://www.w3.org/2000/svg">
+   inkscape:version="1.0.2-2 (e86c870879, 2021-01-15)"
+   sodipodi:docname="newsletter-PT.svg">
+  <metadata
+     id="metadata857">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
   <sodipodi:namedview
      id="namedview1"
      pagecolor="#ffffff"
@@ -23,15 +35,17 @@
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
      inkscape:document-units="mm"
-     inkscape:zoom="0.45344417"
-     inkscape:cx="553.54113"
-     inkscape:cy="254.71714"
-     inkscape:window-width="1366"
-     inkscape:window-height="705"
-     inkscape:window-x="-8"
-     inkscape:window-y="-8"
+     inkscape:zoom="0.90688834"
+     inkscape:cx="610.76501"
+     inkscape:cy="351.04091"
+     inkscape:window-width="1822"
+     inkscape:window-height="1051"
+     inkscape:window-x="89"
+     inkscape:window-y="-9"
      inkscape:window-maximized="1"
-     inkscape:current-layer="layer1" />
+     inkscape:current-layer="layer1"
+     inkscape:document-rotation="0"
+     showgrid="false" />
   <defs
      id="defs1" />
   <g
@@ -40,50 +54,141 @@
      id="layer1"
      transform="translate(-27.149391,-43.735043)">
     <rect
-       style="fill:#3326ff;fill-opacity:1;stroke:#000000;stroke-width:0"
+       style="fill:#09582e;fill-opacity:1;stroke:#000000;stroke-width:0"
        id="rect1"
-       width="290.25055"
-       height="23.965219"
-       x="33.867668"
-       y="52.156433"
+       width="288.79825"
+       height="23.845306"
+       x="34.73381"
+       y="51.59911"
        transform="matrix(0.99953509,0.0304894,-0.09342395,0.99562642,0,0)"
-       ry="4.5982137" />
-    <text
-       xml:space="preserve"
-       style="font-size:28.2223px;line-height:1.3;font-family:Comfortaa;-inkscape-font-specification:Comfortaa;fill:#3326ff;fill-opacity:1;stroke:#000000;stroke-width:0"
-       x="59.826233"
-       y="34.245361"
-       id="text1"><tspan
-         id="tspan1"
-         style="stroke-width:0"
-         sodipodi:role="line"
-         x="59.826233"
-         y="34.245361" /></text>
-    <text
-       xml:space="preserve"
-       style="font-size:14.1111px;line-height:1.3;font-family:Comfortaa;-inkscape-font-specification:Comfortaa;fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0"
-       x="32.946041"
-       y="69.822418"
+       ry="4.5752058" />
+    <g
+       aria-label="SE INSCREVA NA NOSSA NEWSLETTER"
+       transform="matrix(1.0397598,0.03478403,-0.03765435,0.96050092,0,0)"
        id="text2"
-       transform="rotate(2.0740299)"><tspan
-         sodipodi:role="line"
-         id="tspan2"
-         style="font-size:14.1111px;fill:#ffffff;fill-opacity:1;stroke-width:0"
-         x="32.946041"
-         y="69.822418">SE INSCREVA NA NOSSA NEWSLETTER</tspan></text>
+       style="font-size:14.7251px;line-height:1.3;font-family:Comfortaa;-inkscape-font-specification:Comfortaa;fill:#fff4e9;fill-opacity:1;stroke:#000000;stroke-width:0">
+      <path
+         d="m 42.022205,63.386646 q -0.485928,-0.0589 -1.708111,-0.161976 -0.677355,-0.02945 -1.089658,-0.02945 -0.530103,0 -1.001306,0.02945 v -2.282391 h 0.368127 q 1.207458,0 2.503267,0.161976 0.412303,0.0589 0.927681,0.161976 z m -2.429641,4.815107 q 0,-0.309227 -0.04418,-0.441753 -0.04418,-0.147251 -0.147251,-0.191426 -0.103076,-0.0589 -0.353403,-0.08835 l -1.811187,-0.220876 q -1.605036,-0.176701 -2.16459,-1.045482 -0.250326,-0.368128 -0.338677,-0.898231 -0.08835,-0.530104 -0.08835,-1.295809 0,-1.634486 0.83933,-2.356016 0.677355,-0.589004 2.120415,-0.69208 v 2.959745 q 0,0.191427 0.01473,0.323953 0.01472,0.132525 0.0589,0.206151 0.04418,0.08835 0.147251,0.132526 0.103076,0.02945 0.309227,0.04417 l 2.032064,0.250327 q 0.633179,0.08835 1.030757,0.220876 0.397578,0.132526 0.677354,0.412303 0.66263,0.69208 0.66263,2.459092 0,1.870087 -0.824606,2.621068 -0.368127,0.338677 -0.898231,0.500653 -0.515378,0.147251 -1.222183,0.191426 z m -0.78043,3.106996 q -1.47251,0 -2.738869,-0.132526 -0.75098,-0.07362 -1.133832,-0.147251 v -2.149864 q 0.86878,0.07362 1.987888,0.147251 0.706805,0.02945 1.001307,0.02945 0.795155,0 1.045482,-0.04417 v 2.297115 z"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14.7251px;font-family:'Saira Stencil One';-inkscape-font-specification:'Saira Stencil One';fill:#fff4e9;fill-opacity:1;stroke-width:0"
+         id="path843" />
+      <path
+         d="m 44.054262,61.06008 h 2.94502 v 10.130868 h -2.94502 z m 3.563474,0 h 3.740176 v 2.25294 h -3.740176 z m 0,3.887426 h 3.048096 v 2.252941 h -3.048096 z m 0,3.990502 h 3.740176 v 2.25294 h -3.740176 z"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14.7251px;font-family:'Saira Stencil One';-inkscape-font-specification:'Saira Stencil One';fill:#fff4e9;fill-opacity:1;stroke-width:0"
+         id="path845" />
+      <path
+         d="m 56.953414,61.06008 h 2.94502 v 10.130868 h -2.94502 z"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14.7251px;font-family:'Saira Stencil One';-inkscape-font-specification:'Saira Stencil One';fill:#fff4e9;fill-opacity:1;stroke-width:0"
+         id="path847" />
+      <path
+         d="M 61.812696,61.472383 V 61.06008 h 2.94502 l 5.683888,9.703841 v 0.427027 h -2.930295 z m 5.831139,3.283697 v -3.696 h 2.797769 v 8.481657 z m -5.831139,-2.061514 2.797769,4.785657 v 3.710725 h -2.797769 z"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14.7251px;font-family:'Saira Stencil One';-inkscape-font-specification:'Saira Stencil One';fill:#fff4e9;fill-opacity:1;stroke-width:0"
+         id="path849" />
+      <path
+         d="m 79.335556,63.386646 q -0.485928,-0.0589 -1.708111,-0.161976 -0.677355,-0.02945 -1.089658,-0.02945 -0.530103,0 -1.001307,0.02945 v -2.282391 h 0.368128 q 1.207458,0 2.503267,0.161976 0.412303,0.0589 0.927681,0.161976 z m -2.429641,4.815107 q 0,-0.309227 -0.04418,-0.441753 -0.04417,-0.147251 -0.147251,-0.191426 -0.103075,-0.0589 -0.353402,-0.08835 l -1.811187,-0.220876 q -1.605036,-0.176701 -2.16459,-1.045482 -0.250327,-0.368128 -0.338677,-0.898231 -0.08835,-0.530104 -0.08835,-1.295809 0,-1.634486 0.839331,-2.356016 0.677354,-0.589004 2.120414,-0.69208 v 2.959745 q 0,0.191427 0.01472,0.323953 0.01472,0.132525 0.0589,0.206151 0.04417,0.08835 0.147251,0.132526 0.103075,0.02945 0.309227,0.04417 l 2.032064,0.250327 q 0.633179,0.08835 1.030757,0.220876 0.397577,0.132526 0.677354,0.412303 0.66263,0.69208 0.66263,2.459092 0,1.870087 -0.824606,2.621068 -0.368127,0.338677 -0.898231,0.500653 -0.515379,0.147251 -1.222183,0.191426 z m -0.780431,3.106996 q -1.47251,0 -2.738868,-0.132526 -0.75098,-0.07362 -1.133833,-0.147251 v -2.149864 q 0.868781,0.07362 1.987889,0.147251 0.706804,0.02945 1.001306,0.02945 0.795156,0 1.045482,-0.04417 v 2.297115 z"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14.7251px;font-family:'Saira Stencil One';-inkscape-font-specification:'Saira Stencil One';fill:#fff4e9;fill-opacity:1;stroke-width:0"
+         id="path851" />
+      <path
+         d="m 84.724938,60.957004 q 0.117801,-0.01472 0.368128,-0.01472 h 0.382853 q 0.986581,0 1.928988,0.147251 0.485928,0.07363 0.75098,0.147251 v 2.105689 q -0.220877,-0.01472 -0.736255,-0.07362 -0.69208,-0.07363 -1.207458,-0.07363 -0.574279,0 -0.927682,0.04418 -0.338677,0.02945 -0.559554,0.117801 z m 0.750981,10.351745 q -1.47251,0 -2.341291,-0.250326 -0.854056,-0.265052 -1.295809,-0.868781 -0.427028,-0.574279 -0.589004,-1.516686 -0.147251,-0.957131 -0.147251,-2.547442 0,-1.398884 0.103076,-2.267665 0.1178,-0.868781 0.412302,-1.457785 0.309228,-0.603729 0.898232,-0.927681 0.603729,-0.338678 1.59031,-0.456478 v 5.109609 q 0,0.824606 0.02945,1.590311 0.02945,0.589004 0.220876,0.883506 0.206151,0.294502 0.633179,0.368127 0.412303,0.08835 1.222184,0.08835 0.83933,0 1.428334,-0.07362 0.235602,-0.01473 0.574279,-0.07363 v 2.135139 q -0.72153,0.161977 -1.634486,0.220877 -0.500653,0.04418 -1.104382,0.04418 z"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14.7251px;font-family:'Saira Stencil One';-inkscape-font-specification:'Saira Stencil One';fill:#fff4e9;fill-opacity:1;stroke-width:0"
+         id="path853" />
+      <path
+         d="m 89.731454,61.06008 h 2.94502 v 10.130868 h -2.94502 z m 4.152478,6.685195 h -0.589004 v -2.25294 h 0.500653 q 0.456479,0 0.69208,-0.02945 0.235602,-0.04418 0.368128,-0.147251 0.1178,-0.103076 0.161976,-0.309227 0.04418,-0.206152 0.04418,-0.603729 0,-0.397578 -0.04418,-0.603729 -0.04418,-0.220877 -0.161976,-0.323953 -0.117801,-0.103075 -0.353403,-0.132526 -0.220876,-0.02945 -0.706805,-0.02945 h -0.500653 v -2.25294 h 1.516685 q 1.045482,0 1.693387,0.206151 0.647904,0.206152 1.001307,0.63318 0.323952,0.397577 0.427027,0.986581 0.117801,0.589004 0.117801,1.516686 0,1.192733 -0.220876,1.840637 -0.309227,0.824606 -1.089658,1.163283 l 1.531411,3.78435 h -3.092271 z"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14.7251px;font-family:'Saira Stencil One';-inkscape-font-specification:'Saira Stencil One';fill:#fff4e9;fill-opacity:1;stroke-width:0"
+         id="path855" />
+      <path
+         d="m 99.656171,61.06008 h 2.945019 v 10.130868 h -2.945019 z m 3.563479,0 h 3.74017 v 2.25294 h -3.74017 z m 0,3.887426 h 3.04809 v 2.252941 h -3.04809 z m 0,3.990502 h 3.74017 v 2.25294 h -3.74017 z"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14.7251px;font-family:'Saira Stencil One';-inkscape-font-specification:'Saira Stencil One';fill:#fff4e9;fill-opacity:1;stroke-width:0"
+         id="path857" />
+      <path
+         d="m 110.71471,70.763921 q -0.19143,-0.589004 -0.33868,-1.148558 l -0.4712,-1.619761 q -0.2356,-0.795155 -0.36813,-1.192733 -0.1178,-0.441753 -0.19143,-0.66263 l -1.50196,-5.080159 h 3.00392 l 2.7536,10.130868 h -2.7536 z m 2.31184,-4.064128 1.48723,-5.639713 h 2.94502 l -1.50196,5.080159 -0.54483,1.855363 q -0.26505,0.854056 -0.48592,1.619761 -0.14725,0.559554 -0.33868,1.148558 l -0.13253,0.427027 h -0.20615 z"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14.7251px;font-family:'Saira Stencil One';-inkscape-font-specification:'Saira Stencil One';fill:#fff4e9;fill-opacity:1;stroke-width:0"
+         id="path859" />
+      <path
+         d="m 120.19763,61.06008 h 0.25033 l 1.16328,4.034677 -1.69338,6.096191 h -2.94502 z m 3.31315,8.334406 h -2.45909 l 0.61845,-2.267665 h 1.17801 l -1.73756,-6.066741 h 2.69469 l 3.2248,10.130868 h -3.00392 z"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14.7251px;font-family:'Saira Stencil One';-inkscape-font-specification:'Saira Stencil One';fill:#fff4e9;fill-opacity:1;stroke-width:0"
+         id="path861" />
+      <path
+         d="M 131.84514,61.472383 V 61.06008 h 2.94502 l 5.68388,9.703841 v 0.427027 h -2.93029 z m 5.83114,3.283697 v -3.696 h 2.79776 v 8.481657 z m -5.83114,-2.061514 2.79776,4.785657 v 3.710725 h -2.79776 z"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14.7251px;font-family:'Saira Stencil One';-inkscape-font-specification:'Saira Stencil One';fill:#fff4e9;fill-opacity:1;stroke-width:0"
+         id="path863" />
+      <path
+         d="m 144.68542,61.06008 h 0.25033 l 1.16328,4.034677 -1.69339,6.096191 h -2.94502 z m 3.31315,8.334406 h -2.4591 l 0.61846,-2.267665 h 1.17801 l -1.73757,-6.066741 h 2.6947 l 3.22479,10.130868 h -3.00392 z"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14.7251px;font-family:'Saira Stencil One';-inkscape-font-specification:'Saira Stencil One';fill:#fff4e9;fill-opacity:1;stroke-width:0"
+         id="path865" />
+      <path
+         d="M 156.33292,61.472383 V 61.06008 h 2.94502 l 5.68389,9.703841 v 0.427027 h -2.9303 z m 5.83114,3.283697 v -3.696 h 2.79777 v 8.481657 z m -5.83114,-2.061514 2.79777,4.785657 v 3.710725 h -2.79777 z"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14.7251px;font-family:'Saira Stencil One';-inkscape-font-specification:'Saira Stencil One';fill:#fff4e9;fill-opacity:1;stroke-width:0"
+         id="path867" />
+      <path
+         d="m 172.50107,66.125514 q 0,-1.281083 -0.0147,-1.678661 -0.0295,-0.603729 -0.16197,-0.868781 -0.13253,-0.279777 -0.42703,-0.338677 -0.2945,-0.04418 -0.83933,-0.04418 -0.63318,0 -0.82461,0.0589 v -2.297116 q 0.13253,-0.01472 0.39758,-0.01472 h 0.42703 q 1.64921,0 2.54744,0.265052 0.91296,0.250327 1.32526,0.839331 0.38285,0.544828 0.4712,1.428334 0.10308,0.883506 0.10308,2.650518 0,1.546136 -0.0736,2.385466 -0.0589,0.824606 -0.32395,1.369435 -0.2945,0.618454 -0.91295,0.942406 -0.60373,0.323952 -1.69339,0.427028 z m -1.44306,5.183235 q -2.14987,0 -3.09227,-0.471203 -0.48593,-0.235601 -0.76571,-0.633179 -0.27977,-0.397578 -0.4123,-0.986582 -0.1178,-0.515378 -0.14725,-1.178008 -0.0294,-0.677354 -0.0294,-1.914263 0,-1.546135 0.0589,-2.370741 0.0736,-0.824605 0.33868,-1.384159 0.2945,-0.603729 0.89823,-0.927681 0.60373,-0.323953 1.70811,-0.441753 v 5.124334 q 0,0.868781 0.0294,1.663936 0.0294,0.60373 0.14725,0.883506 0.13253,0.279777 0.42703,0.323953 0.25032,0.0589 0.83933,0.0589 0.60373,0 0.8246,-0.04417 v 2.28239 q -0.13252,0.01473 -0.39757,0.01473 z"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14.7251px;font-family:'Saira Stencil One';-inkscape-font-specification:'Saira Stencil One';fill:#fff4e9;fill-opacity:1;stroke-width:0"
+         id="path869" />
+      <path
+         d="m 184.1339,63.386646 q -0.48593,-0.0589 -1.70811,-0.161976 -0.67736,-0.02945 -1.08966,-0.02945 -0.5301,0 -1.00131,0.02945 v -2.282391 h 0.36813 q 1.20746,0 2.50327,0.161976 0.4123,0.0589 0.92768,0.161976 z m -2.42964,4.815107 q 0,-0.309227 -0.0442,-0.441753 -0.0442,-0.147251 -0.14725,-0.191426 -0.10307,-0.0589 -0.3534,-0.08835 l -1.81119,-0.220876 q -1.60503,-0.176701 -2.16459,-1.045482 -0.25032,-0.368128 -0.33867,-0.898231 -0.0884,-0.530104 -0.0884,-1.295809 0,-1.634486 0.83934,-2.356016 0.67735,-0.589004 2.12041,-0.69208 v 2.959745 q 0,0.191427 0.0147,0.323953 0.0147,0.132525 0.0589,0.206151 0.0442,0.08835 0.14725,0.132526 0.10307,0.02945 0.30922,0.04417 l 2.03207,0.250327 q 0.63318,0.08835 1.03075,0.220876 0.39758,0.132526 0.67736,0.412303 0.66263,0.69208 0.66263,2.459092 0,1.870087 -0.82461,2.621068 -0.36812,0.338677 -0.89823,0.500653 -0.51538,0.147251 -1.22218,0.191426 z m -0.78043,3.106996 q -1.47251,0 -2.73887,-0.132526 -0.75098,-0.07362 -1.13383,-0.147251 v -2.149864 q 0.86878,0.07362 1.98789,0.147251 0.7068,0.02945 1.0013,0.02945 0.79516,0 1.04548,-0.04417 v 2.297115 z"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14.7251px;font-family:'Saira Stencil One';-inkscape-font-specification:'Saira Stencil One';fill:#fff4e9;fill-opacity:1;stroke-width:0"
+         id="path871" />
+      <path
+         d="m 193.14566,63.386646 q -0.48592,-0.0589 -1.70811,-0.161976 -0.67735,-0.02945 -1.08965,-0.02945 -0.53011,0 -1.00131,0.02945 v -2.282391 h 0.36813 q 1.20745,0 2.50326,0.161976 0.41231,0.0589 0.92768,0.161976 z m -2.42964,4.815107 q 0,-0.309227 -0.0442,-0.441753 -0.0442,-0.147251 -0.14725,-0.191426 -0.10308,-0.0589 -0.35341,-0.08835 l -1.81118,-0.220876 q -1.60504,-0.176701 -2.16459,-1.045482 -0.25033,-0.368128 -0.33868,-0.898231 -0.0883,-0.530104 -0.0883,-1.295809 0,-1.634486 0.83933,-2.356016 0.67735,-0.589004 2.12041,-0.69208 v 2.959745 q 0,0.191427 0.0147,0.323953 0.0147,0.132525 0.0589,0.206151 0.0442,0.08835 0.14725,0.132526 0.10308,0.02945 0.30923,0.04417 l 2.03206,0.250327 q 0.63318,0.08835 1.03076,0.220876 0.39758,0.132526 0.67735,0.412303 0.66263,0.69208 0.66263,2.459092 0,1.870087 -0.8246,2.621068 -0.36813,0.338677 -0.89823,0.500653 -0.51538,0.147251 -1.22219,0.191426 z m -0.78043,3.106996 q -1.47251,0 -2.73887,-0.132526 -0.75098,-0.07362 -1.13383,-0.147251 v -2.149864 q 0.86878,0.07362 1.98789,0.147251 0.7068,0.02945 1.00131,0.02945 0.79515,0 1.04548,-0.04417 v 2.297115 z"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14.7251px;font-family:'Saira Stencil One';-inkscape-font-specification:'Saira Stencil One';fill:#fff4e9;fill-opacity:1;stroke-width:0"
+         id="path873" />
+      <path
+         d="m 197.47483,61.06008 h 0.25033 l 1.16328,4.034677 -1.69339,6.096191 h -2.94501 z m 3.31315,8.334406 h -2.45909 l 0.61845,-2.267665 h 1.17801 l -1.73756,-6.066741 h 2.69469 l 3.2248,10.130868 h -3.00392 z"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14.7251px;font-family:'Saira Stencil One';-inkscape-font-specification:'Saira Stencil One';fill:#fff4e9;fill-opacity:1;stroke-width:0"
+         id="path875" />
+      <path
+         d="M 209.12234,61.472383 V 61.06008 h 2.94502 l 5.68389,9.703841 v 0.427027 h -2.93029 z m 5.83114,3.283697 v -3.696 h 2.79777 v 8.481657 z m -5.83114,-2.061514 2.79777,4.785657 v 3.710725 h -2.79777 z"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14.7251px;font-family:'Saira Stencil One';-inkscape-font-specification:'Saira Stencil One';fill:#fff4e9;fill-opacity:1;stroke-width:0"
+         id="path877" />
+      <path
+         d="m 219.66549,61.06008 h 2.94502 v 10.130868 h -2.94502 z m 3.56348,0 h 3.74017 v 2.25294 h -3.74017 z m 0,3.887426 h 3.04809 v 2.252941 h -3.04809 z m 0,3.990502 h 3.74017 v 2.25294 h -3.74017 z"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14.7251px;font-family:'Saira Stencil One';-inkscape-font-specification:'Saira Stencil One';fill:#fff4e9;fill-opacity:1;stroke-width:0"
+         id="path879" />
+      <path
+         d="m 230.22339,70.763921 q -0.10307,-0.412303 -0.26505,-1.148558 l -0.39758,-1.619761 -0.44175,-1.855363 -1.19273,-5.080159 h 2.93029 l 2.09097,10.130868 h -2.62107 z m 2.31184,-4.638407 1.10439,-5.065434 h 3.01864 l 2.41492,10.130868 h -2.51799 l -0.11781,-0.485928 -0.30922,-1.281083 -0.44176,-1.870088 q -0.27977,-1.133833 -0.5301,-2.22349 h -0.0883 l -0.50065,2.22349 -0.16198,0.75098 q -0.0736,0.309227 -0.14725,0.589004 -0.0589,0.279777 -0.1178,0.530104 l -0.2945,1.281083 -0.1178,0.485928 h -0.16198 z m 5.94894,-0.08835 0.88351,-4.977084 h 2.93029 l -1.20745,5.080159 -0.44176,1.855363 q -0.27977,1.133833 -0.38285,1.619761 l -0.27978,1.148558 -0.10307,0.427027 h -0.1767 z"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14.7251px;font-family:'Saira Stencil One';-inkscape-font-specification:'Saira Stencil One';fill:#fff4e9;fill-opacity:1;stroke-width:0"
+         id="path881" />
+      <path
+         d="m 250.38202,63.386646 q -0.48593,-0.0589 -1.70811,-0.161976 -0.67735,-0.02945 -1.08966,-0.02945 -0.5301,0 -1.0013,0.02945 v -2.282391 h 0.36812 q 1.20746,0 2.50327,0.161976 0.4123,0.0589 0.92768,0.161976 z m -2.42964,4.815107 q 0,-0.309227 -0.0442,-0.441753 -0.0442,-0.147251 -0.14725,-0.191426 -0.10308,-0.0589 -0.35341,-0.08835 l -1.81118,-0.220876 q -1.60504,-0.176701 -2.16459,-1.045482 -0.25033,-0.368128 -0.33868,-0.898231 -0.0883,-0.530104 -0.0883,-1.295809 0,-1.634486 0.83933,-2.356016 0.67735,-0.589004 2.12041,-0.69208 v 2.959745 q 0,0.191427 0.0147,0.323953 0.0147,0.132525 0.0589,0.206151 0.0442,0.08835 0.14725,0.132526 0.10308,0.02945 0.30923,0.04417 l 2.03206,0.250327 q 0.63318,0.08835 1.03076,0.220876 0.39758,0.132526 0.67735,0.412303 0.66263,0.69208 0.66263,2.459092 0,1.870087 -0.8246,2.621068 -0.36813,0.338677 -0.89824,0.500653 -0.51537,0.147251 -1.22218,0.191426 z m -0.78043,3.106996 q -1.47251,0 -2.73887,-0.132526 -0.75098,-0.07362 -1.13383,-0.147251 v -2.149864 q 0.86878,0.07362 1.98789,0.147251 0.7068,0.02945 1.00131,0.02945 0.79515,0 1.04548,-0.04417 v 2.297115 z"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14.7251px;font-family:'Saira Stencil One';-inkscape-font-specification:'Saira Stencil One';fill:#fff4e9;fill-opacity:1;stroke-width:0"
+         id="path883" />
+      <path
+         d="m 252.41407,61.06008 h 2.94502 v 10.130868 h -2.94502 z m 3.56348,7.760127 h 3.15117 v 2.370741 h -3.15117 z"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14.7251px;font-family:'Saira Stencil One';-inkscape-font-specification:'Saira Stencil One';fill:#fff4e9;fill-opacity:1;stroke-width:0"
+         id="path885" />
+      <path
+         d="m 260.38034,61.06008 h 2.94502 v 10.130868 h -2.94502 z m 3.56347,0 h 3.74018 v 2.25294 h -3.74018 z m 0,3.887426 h 3.0481 v 2.252941 h -3.0481 z m 0,3.990502 h 3.74018 v 2.25294 h -3.74018 z"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14.7251px;font-family:'Saira Stencil One';-inkscape-font-specification:'Saira Stencil One';fill:#fff4e9;fill-opacity:1;stroke-width:0"
+         id="path887" />
+      <path
+         d="m 268.62638,61.06008 h 8.29023 v 2.356016 h -8.29023 z m 2.66524,2.94502 h 2.94502 v 7.185848 h -2.94502 z"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14.7251px;font-family:'Saira Stencil One';-inkscape-font-specification:'Saira Stencil One';fill:#fff4e9;fill-opacity:1;stroke-width:0"
+         id="path889" />
+      <path
+         d="m 277.18165,61.06008 h 8.29023 v 2.356016 h -8.29023 z m 2.66524,2.94502 h 2.94502 v 7.185848 h -2.94502 z"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14.7251px;font-family:'Saira Stencil One';-inkscape-font-specification:'Saira Stencil One';fill:#fff4e9;fill-opacity:1;stroke-width:0"
+         id="path891" />
+      <path
+         d="m 286.56154,61.06008 h 2.94502 v 10.130868 h -2.94502 z m 3.56347,0 h 3.74018 v 2.25294 h -3.74018 z m 0,3.887426 h 3.0481 v 2.252941 h -3.0481 z m 0,3.990502 h 3.74018 v 2.25294 h -3.74018 z"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14.7251px;font-family:'Saira Stencil One';-inkscape-font-specification:'Saira Stencil One';fill:#fff4e9;fill-opacity:1;stroke-width:0"
+         id="path893" />
+      <path
+         d="m 295.63217,61.06008 h 2.94502 v 10.130868 h -2.94502 z m 4.15248,6.685195 h -0.58901 v -2.25294 h 0.50066 q 0.45647,0 0.69208,-0.02945 0.2356,-0.04418 0.36812,-0.147251 0.1178,-0.103076 0.16198,-0.309227 0.0442,-0.206152 0.0442,-0.603729 0,-0.397578 -0.0442,-0.603729 -0.0442,-0.220877 -0.16198,-0.323953 -0.1178,-0.103075 -0.3534,-0.132526 -0.22088,-0.02945 -0.7068,-0.02945 h -0.50066 v -2.25294 h 1.51669 q 1.04548,0 1.69338,0.206151 0.64791,0.206152 1.00131,0.63318 0.32395,0.397577 0.42703,0.986581 0.1178,0.589004 0.1178,1.516686 0,1.192733 -0.22088,1.840637 -0.30922,0.824606 -1.08965,1.163283 l 1.53141,3.78435 h -3.09227 z"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14.7251px;font-family:'Saira Stencil One';-inkscape-font-specification:'Saira Stencil One';fill:#fff4e9;fill-opacity:1;stroke-width:0"
+         id="path895" />
+    </g>
     <rect
-       style="fill:#3326ff;fill-opacity:1;stroke:#0101e0;stroke-width:0;stroke-opacity:1"
+       style="fill:#09582e;fill-opacity:1;stroke:#0101e0;stroke-width:0;stroke-opacity:1"
        id="rect7"
        width="2.0629621"
        height="12.377842"
-       x="59.001045"
+       x="59.398846"
        y="43.735043" />
     <rect
-       style="fill:#3326ff;fill-opacity:1;stroke:#0101e0;stroke-width:0;stroke-opacity:1"
+       style="fill:#09582e;fill-opacity:1;stroke:#0101e0;stroke-width:0;stroke-opacity:1"
        id="rect7-5"
        width="2.0629621"
        height="20.217142"
-       x="284.55133"
+       x="284.94913"
        y="43.965977" />
   </g>
 </svg>
