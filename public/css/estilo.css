@@ -95,12 +95,12 @@ html, body {
 }
 
 
-
 .centralizar{
 	text-align: center;
 	align-items: center;
 	align-content: center;
 }
+
 .align-left{
 	text-align: left;
 	margin: 0px !important
@@ -117,7 +117,6 @@ html, body {
     color: #FFF2E5; 
     font-weight: bold;
     text-decoration: none;  
-    margin-left: 20px;
 }
 
 .bg-barra a:hover {
