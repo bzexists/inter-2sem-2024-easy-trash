@@ -420,10 +420,10 @@ async function localizarcep() {
 		}).addTo(mapa);
 
 		mapa.on("click", function (e) {
-			let inputaltlat = document.getElementById("altlat");
-			let inputaltlng = document.getElementById("altlng");
-			inputaltlat.value = e.latlng.lat;
-			inputaltlng.value = e.latlng.lng;
+			let inputlat = document.getElementById("inputlat");
+			let inputlng = document.getElementById("inputlng");
+			inputlat.value = e.latlng.lat;
+			inputlng.value = e.latlng.lng;
 			popup.setLatLng([e.latlng.lat, e.latlng.lng]);
 			popup.setContent(`<p>Seu local está aqui! 😁</p>`);
 			popup.openOn(mapa);
@@ -431,12 +431,7 @@ async function localizarcep() {
 
 		mapa.setView(latlng, 18);
 	}
-	let altlati = document.getElementById("altlat");
-	let lati = altlati.value;
-	let altlngi = document.getElementById("altlng");
-	let lngi = altlngi.value;
-	
-	iniciarMapa(lati, alti);
+
+	iniciarMapa(-23.587213828191686, -46.644340317344714);
 
 </script>
-
