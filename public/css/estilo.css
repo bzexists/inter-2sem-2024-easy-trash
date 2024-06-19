@@ -115,13 +115,12 @@ html, body {
 .bg-barra a {
     font-family: "Saira Stencil One", "Goldman", sans-serif;
     color: #FFF2E5; 
-    font-weight: bold;
+    font-weight: normal;
     text-decoration: none;  
 }
 
 .bg-barra a:hover {
     text-decoration: underline;
-    color: rgb(155, 255, 190);
 }
 
 
