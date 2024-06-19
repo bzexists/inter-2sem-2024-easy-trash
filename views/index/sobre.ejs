@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Easy Trash</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
     <link href="https://fonts.googleapis.com/css2?family=Galindo&display=swap" rel="stylesheet">
     
     <style>
@@ -107,8 +108,10 @@
 
                     Desde o seu lançamento, a easyTrash dominou o mercado, conquistando a confiança de consumidores e parceiros com sua plataforma prática e eficiente. Além de facilitar o descarte correto, a empresa promove a educação ambiental e a conscientização sobre sustentabilidade, cumprindo a visão de Fernando e contribuindo para um futuro mais verde.</p>
             </div>
-            <div class="col">
-                <img src="public/img/juntos.jpg" alt="">
+            <div class="col" >
+                <div data-aos = "fade-left">
+                    <img src="public/img/juntos.jpg" alt="">
+                </div>
             </div>
         </div>
     </div>
@@ -117,17 +120,23 @@
     <div class="container-fluid">
         <div class="row text-center">
             <div class="col-md-4 fundo-coluna">
+                <div data-aos="fade-down">
                 <img class="img-staff circle" src="public/img/Fernando.jpg" alt="">
+                </div>
                 <h2>Fernando </h2>
                 <p>Com foco na parte administrativa, Fernando Sabella é um líder comprometido em garantir a eficiência e a otimização dos processos internos. Sua vasta experiência em gerenciamento de projetos e operações é fundamental para manter o funcionamento suave e eficaz de nossa equipe e operações comerciais.</p>
             </div>
             <div class="col-md-4 fundo-coluna">
+                <div data-aos="fade-up">
                 <img class="img-staff circle" src="public/img/Isa.jpg" alt="">
+                </div>
                 <h2>Isabelle </h2>
                 <p>Isabelle Dib é especialista na área de dados, trazendo consigo uma vasta experiência em análise e interpretação de informações complexas. Sua expertise em gerenciamento de dados é crucial para o desenvolvimento de estratégias eficazes e orientadas por dados para nossos clientes.</p>
             </div>
             <div class="col-md-4 fundo-coluna">
+                <div data-aos="fade-down">
                 <img class="img-staff circle" src="public/img/Henrique.JPG" alt="">
+                </div>
                 <h2>Henrique </h2>
                 <p>Henrique Lecce é um líder visionário especializado em UX (Experiência do Usuário) com habilidades excepcionais em combinar cores e arte. Sua formação em design centrado no usuário e sensibilidade artística garantem que nossos produtos digitais sejam funcionais e visualmente cativantes.</p>
             </div>
@@ -137,5 +146,10 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+
 </body>
 </html>
